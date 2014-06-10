@@ -3,9 +3,9 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- <title>Alex Payne</title>
- <link href="https://al3x.net/atom.xml" rel="self"/>
- <link href="https://al3x.net/"/>
+ <title>Villim Wong</title>
+ <link href="https://www.from0to1.net/atom.xml" rel="self"/>
+ <link href="https://www.from0to1.net/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://www.from0to1.net/</id>
  <author>

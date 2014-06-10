@@ -106,7 +106,7 @@ header, footer, nav, article { display: block; }
 }
 
 /* ids */
-#cse-search-box {
+#search-box {
   margin-top: 10px;
 }
 
