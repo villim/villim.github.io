@@ -1,0 +1,5 @@
+#baseurl: /from0to1
+encoding: utf-8
+permalink:   /:title
+pygments:    true
+markdown:    rdiscount

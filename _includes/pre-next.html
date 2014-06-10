@@ -1,0 +1,11 @@
+<div id="prenext">
+	{% if page.previous %}
+	<i class="fa fa-arrow-circle-left"></i>
+	<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+	{% endif %}
+	<span> &nbsp;&bull;&nbsp;&bull;&nbsp;&bull;&nbsp; </span>
+	{% if page.next %}
+	<a  href="{{page.next.url}}">{{page.next.title}}</a>
+	<i class="fa fa-arrow-circle-right"></i> 
+	{% endif %}
+</div>

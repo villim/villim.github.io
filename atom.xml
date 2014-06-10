@@ -1,0 +1,28 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Alex Payne</title>
+ <link href="https://al3x.net/atom.xml" rel="self"/>
+ <link href="https://al3x.net/"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://www.from0to1.net/</id>
+ <author>
+   <name>Villim Wong</name>
+   <email>villim218@gmail.com</email>
+ </author>
+ {% for post in site.posts limit:10 %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="https://www.from0to1.net{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://www.from0to1.net{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+   <author>
+     <name>Villim Wong</name>
+     <uri>https://www.from0to1.net</uri>
+   </author>
+ </entry>
+ {% endfor %}
+</feed>

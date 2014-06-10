@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="en-us" http-equiv="Content-Language" />
+    <meta content="The online writing of Villim Wong" name="description" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link rel="alternate" type="application/atom+xml" title="Villim Wong - Atom" href="/atom.xml" />
+    <link href="http://www.clickpass.com/openid_server" rel="openid.server" />
+    <link href="http://clickpass.com/public/al3x" rel="openid.delegate" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Villim  &mdash; {{ page.title }}</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+			<div id="header">
+				<h1 id="title">
+					<a href="/" title="Home" color="#3f9116">From 0 To 1</a> by <a href="/about.html" title="About">Vilim</a>
+				</h1>
+				<h2 id="subtitle">
+					pickup crumbs on the endless road
+				</h2>
+			</div>
+
+			<div id="sidebar">
+        <form action="https://www.google.com/cse" id="cse-search-box">
+          <div>
+            <input type="hidden" name="cx" value="00062178004161548235:gnplrkdmhbu" />
+            <input type="hidden" name="ie" value="UTF-8" />
+            <input type="text" name="q" size="20" />
+            <input type="submit" name="sa" value="Search" />
+          </div>
+        </form>
+
+				<div id="selfintro">
+					<img src="{{site.baseurl}}img/My.header.400.yellow.png" height=150 width=150/>
+					<h2 id="subtitle">I think,<br/><br/> therefore<br/><br/>I am.</h2>
+					{% include social.html %}
+				</div>
+			</div>
+
+			<div id="main">
+			{{ content }}
+			</div>
+
+      <div id="footer">
+        <a href="/" title="Home">Home</a> &bull;
+        <a href="/about.html" title="About the author and site">About</a> &bull;
+				<a href="/announcement.html" title="announcement">Announcement</a> &bull;
+        <a href="/archive.html" title="Archived writing">Archive</a>
+
+    </div>
+  </body>
+</html>
