@@ -1,0 +1,29 @@
+---
+layout: post
+title: 'OTOOL : Mac''s objdump'
+categories:
+- LINUX
+- Mac
+tags:
+- Mac
+- objdump
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: otool-macs-objdump
+author:
+  login: villim
+  email: villim@126.com
+  display_name: Villim
+  first_name: Villim
+  last_name: Wong
+---
+<p>看C语言，跑不开要用到查看 Binary Object File 的工具，在 Linux 自然是 GNU 提供的 objdump，不过现在用 MBP 后却没有了，没有仔细看为什么，可能是版权问题吧。</p>
+<p>不过苹果自己提供了一个工具，otool。使用起来也很简单，目前看到比较常用的命令是：</p>
+<pre class="brush:shell">otool -t  BINARY_FILE     #查看文件内容</pre>
+<pre class="brush:shell">otool -tv  BINARY_FILE     #反汇编文件</pre>
+<p>还有一个可能比较有用的是：</p>
+<pre class="brush:shell">otool -L  BINARY_FILE      #查看文件用到的链接库文件</pre>
+<p>以后用到更多的话，自己man文档看吧。</p>

@@ -1,0 +1,58 @@
+---
+layout: post
+title: A Interesting Problem About Overriding Variables
+categories:
+- JAVA
+tags:
+- Java
+status: publish
+type: post
+published: true
+meta: {}
+author:
+  login: villim
+  email: villim@126.com
+  display_name: Villim
+  first_name: Villim
+  last_name: Wong
+---
+<p>Variables can also be overridden, it’s known as shadowing or hiding.</p>
+<p><span style="font-size: small;"><span style="font-size: small;">But</span> when variables are overridden what will happen? Really interesting quetion,look at the codes below:<br />
+</span><br />
+class S1 {<br />
+public String s = "S1";<br />
+public String getS() {<br />
+return s;<br />
+}<br />
+}<br />
+class S2 extends S1{<br />
+public String s = "S2";<br />
+public String getS() {<br />
+return s;<br />
+}<br />
+}<br />
+and then:<br />
+S1 s1 = new S1();<br />
+S2 s2 = new S2();</p>
+<p>System.out.println(s1.s); //print 1<br />
+System.out.println(s1.getS()); //print 2<br />
+System.out.println(s2.s); //print 3<br />
+System.out.println(s2.getS()); //print 4</p>
+<p>s1 = s2;<br />
+System.out.println(s1.s);  //print 5<br />
+System.out.println(s1.getS()); //print 6</p>
+<p><span style="font-size: small;">That we really care about is wat 'll 5 and 6 print out, "S1" or "S2" ?Really tricky !ha!~<br />
+the resulet is:</span></p>
+<p><span style="font-size: small;"><span style="font-size: small;"><em>//print 5 -------  'S1'<br />
+//print 6 -------  'S2</em>'<br />
+Is that ur answer?Do u know why?At first glance, we may think,after s1= s2, s1 have point to  the instance of  S2, and s2.s = "S2",so the result is "S2". Then  how can it  be "S1" ?<br />
+As we know " <span style="font-size: small;">variable is resolved at compile time</span>" and " <span style="font-size: small;">method is resolved at run time</span>" .  When we upcast S2 to S1 in the line "S1=S2", To S1.s , S2.s is a shadow  field. when S1 initialised, it don't  know the existance of S2.s. cuz S2.s is resolved at compile time. So //print 5 will return "S1".</span></span></p>
+<p><span style="font-size: small;"><span style="font-size: small;"><span style="font-size: small;">but at  // print 6. It's quite different when we call method s1.getS(). Cuz S2 orverriding getS()  method, and "<span style="font-size: x-small;"><strong>method is resolved at run time</strong></span>", so we can get "S2".</p>
+<p>if we define S2 like this :</p>
+<p></span><span style="font-size: small;"><span style="font-size: x-small;">class S2 extends S1{<br />
+public String s = "S2";<br />
+public String getS() {<br />
+return super.getS();<br />
+}<br />
+}</span><br />
+will print "S1" at // print 6, cuz to the parent method getS(), it  doesn't know S2.s exist.</span></span></span></p>

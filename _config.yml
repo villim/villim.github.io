@@ -2,4 +2,4 @@
 encoding: utf-8
 permalink:   /:title
 pygments:    true
-markdown:    rdiscount
+markdown:    redcarpet #rdiscount

@@ -1,0 +1,39 @@
+---
+layout: post
+title: Synergy 共享鼠标键盘利器
+categories:
+- LINUX
+- OTHER
+tags:
+- Synergy
+- Ubuntu
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+author:
+  login: villim
+  email: villim@126.com
+  display_name: Villim
+  first_name: Villim
+  last_name: Wong
+---
+<p>不知道你是否有遇到这样的情况. 你有多台独立的主机,分别装着 Windows, Mac 或者 Linux 的操作系统；但却只有一套键盘和鼠标, 那么如何能让它们共享鼠标和键盘呢?</p>
+<p><img class="alignnone" title="synergy sence" src="assets/6297087531_22a7319c9b.jpg" alt="" width="500" height="226" /></p>
+<p>&nbsp;</p>
+<p>我目前的工作环境就是这样一个窘况. 同时使用着两台主机,一台是Window XP , cable 连接；一台装着 Ubuntu , Wireless 连接. 由于放着两套鼠标键盘, 桌子占掉了一大块面积, 相当不爽 -_-||</p>
+<p>一直在考虑有什么方法能共享键盘鼠标. 最靠谱的方法, 应该是硬解决, 使用物理切换器. (还没有尝试过, 不知道具体效果) 可是价格吗,稍微有点贵. 好一点的差不多都要 100 - 200 元. 不是有强烈的需求还是算了吧.</p>
+<p>&nbsp;</p>
+<p>软的解决方案, Synergy 就是一个很好的选择. 老的版本相当不人性化, 配置还是苦差,可刚刚发布的 <strong>1.4.5 Beta</strong>, 让GUI变得更加简单明了, 很快就能完成配置. 很赞!</p>
+<p><strong><span style="color: #993300;">下载软件</span></strong> : 首先根据你的操作系统, 到<a title="synergy download" href="http://synergy-foss.org/download/" target="_blank">这里</a>下载对应的版本.</p>
+<p><span style="color: #993300;"><strong>配置 Synergy 服务器</strong></span> : 将有键盘鼠标的电脑设置为 "<strong>Sever</strong>"</p>
+<p><img class="alignnone" title="Synergy 主页面" src="assets/6297600868_e0d96efe00.jpg" alt="" width="451" height="327" /></p>
+<p>再点击 "<strong>Configure Sever</strong>" , 拖入一个新的 Client, 这里我取名叫做 "Skynet"</p>
+<p><img class="alignnone" title="Synergy add client" src="assets/6297070011_f87f493792.jpg" alt="" width="500" height="433" /></p>
+<p>点击标签里的 "<strong>Hotkeys</strong>" , 定义一个将鼠标切换到其他显示屏的动作即可.</p>
+<p><img class="alignnone" title="Synergy hotkey" src="assets/6297070061_b528a87873.jpg" alt="" width="500" height="455" /></p>
+<p><strong>Server</strong> 端的配置就完成了, 到主页面启动服务就行了.</p>
+<p><span style="color: #993300;"><strong>配置客户端 :</strong></span>　到主页面勾选 "<strong>Client</strong>", 填入 <strong>Server </strong>的IP地址, 启动服务.</p>
+<p>如果一切正常, 那么已经能正常工作了. 就我的使用感受是, 如果只是要求能够共享鼠标键盘, 显然Synergy已经做得相当不错了. 但是有时多少还是有些延迟, 对于我要同时在两台电脑上开发来说, 是不能接受的. 不过可能和我其中一台电脑使用无线网有关系.</p>
+<p>但是总的来说 Synergy做得已经相当棒了! 值得持续关注.</p>

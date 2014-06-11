@@ -1,0 +1,62 @@
+---
+layout: post
+title: HTTPD
+categories:
+- LINUX
+tags:
+- HTTP
+- HTTPD
+status: publish
+type: post
+published: true
+meta: {}
+author:
+  login: villim
+  email: villim@126.com
+  display_name: Villim
+  first_name: Villim
+  last_name: Wong
+---
+<p>we already seen how <a title="A Little HTTP" href="http://www.from0to1.net/a-little-http/">HTTP</a> protocol works.   When we developing WEB applications, we also used to encounter an similar stuff named "HTTPD", what's hell is that ?</p>
+<h2><span style="color: #008000;"><strong>What is HTTPD ?</strong></span></h2>
+<p>HTTPD is the daemon of <strong>Apache HTTP Server</strong> : is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows NT.</p>
+<h2><strong><span style="color: #008000;">Why we using HTTPD?</span></strong></h2>
+<p>Tomcat already provide HTTP service. After deploy web application at Tomcat, we can already access application through the default 8080 port. So why we have to use another HTTP Server ?</p>
+<p>The reason is :</p>
+<ol>
+<li>  <em><strong>Improve the performance when processing static documents</strong></em></li>
+<li>  <em><strong>Load balancing and Fault tolerant</strong></em></li>
+<li>  <em><strong>Uninterrupted updating applications</strong></em></li>
+</ol>
+<p>There are three ways to integrate Tomcat with HTTPD</p>
+<ul>
+<li>JK</li>
+<li>Http_proxy</li>
+<li>ajp_proxy</li>
+</ul>
+<h2><span style="color: #008000;"><strong> What is AJP ?</strong></span></h2>
+<p><strong>Apache JServ Protocol</strong> (AJP) is a <em>binary protocol</em> that can proxy inbound requests from a web server through to an application server that sits behind the web server.</p>
+<p>When using a single server, the performance when using a native webserver in front of the Tomcat instance is most of the time significantly worse than a standalone Tomcat with its default HTTP connector, even if a large part of the web application is made of static files. If integration with the native webserver is needed for any reason, an AJP connector will provide faster performance than proxied HTTP. AJP clustering is the most efficient from the Tomcat perspective. It is otherwise functionally equivalent to HTTP clustering.</p>
+<h2><strong><span style="color: #008000;">How to configure ajp_Proxy ?</span></strong></h2>
+<p>ajp_proxy is started from Apache 2.2</p>
+<p><strong><span style="color: #993300;">Precondition: </span></strong> For Apache (2.2) proxy_ajp.conf</p>
+<pre class="brush:plain">LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_ajp_module modules/mod_proxy_ajp.so</pre>
+<p><span style="color: #993300;"><strong>A conf example:</strong></span></p>
+<pre class="brush:shell">less /etc/httpd/conf.d/000_villim.net.conf</pre>
+<p>The content of<em><strong> 000_villim.net.conf</strong></em></p>
+<pre class="brush:shell">&lt;VirtualHost XX.XX.XX.XX:80&gt;
+ServerName villim.net
+
+ErrorLog /var/log/httpd/villim.net.log
+CustomLog /var/log/httpd/villim.net-access.log combined
+
+DocumentRoot "/var/www/html"
+
+RedirectMatch ^/$ https://villim.net/feedback/
+
+ProxyPass /feedback ajp://villim.net:8009/feedback
+ProxyPass /adresboek ajp://localhost:8009/adresboek
+ProxyPass /restservice ajp://villim.net:8009/lrestservice
+
+&lt;/VirtualHost&gt;</pre>
