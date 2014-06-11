@@ -9,9 +9,6 @@ tags:
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: '%e5%9b%9e%e9%a1%be%e5%9b%9e%e5%bf%86%e7%9a%84%e5%87%a0%e4%b8%aa%e9%97%ae%e9%a2%98'
 author:
   login: villim
   email: villim@126.com
