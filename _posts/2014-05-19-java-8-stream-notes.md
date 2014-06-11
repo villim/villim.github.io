@@ -6,31 +6,29 @@ categories:
 tags:
 - Java8
 - Stream
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-author:
-  login: villim
-  email: villim@126.com
-  display_name: Villim
-  first_name: Villim
-  last_name: Wong
+
 ---
 <p>We have seen <a title="Java 8 Lambda Learning Notes" href="http://www.from0to1.net/java-8-lambda-learning-notes/" target="_blank">How the Java8 Lambda working</a>.</p>
 <p>And another big new stuff  is the Steam Interface. When they co-operate with each other, will be much more powerful.</p>
-<h4><span style="color: #993300;"><strong>WHAT IS STREAM?</strong></span></h4>
-<ul>
-<li>As Javadoc says , streams  are sequences of elements supporting sequential and parallel aggregate operations</li>
-<li>A Stream is the internal iteration analogue of an Iterator</li>
-</ul>
+
+###WHAT IS STREAM?
+
+
+* As Javadoc says , streams  are sequences of elements supporting sequential and parallel aggregate operations
+* A Stream is the internal iteration analogue of an Iterator
+
 <p>Let's see a example, previously, we have to do loops like</p>
-<pre class="lang:java decode:true">int count = 0;
-for (Artist artist : allArtists) {
-if (artist.isFrom("London")) { 
-    count++;
-} }</pre>
+
+{% highlight Java %}
+
+	int count = 0;
+		for (Artist artist : allArtists) {
+	  	if (artist.isFrom("London")) { 
+        	count++;
+	} }
+
+{% endhighlight%}
+	
 <p>But with Stream, you can make a much clean code like</p>
 <pre class="lang:java decode:true">long count = allArtists.stream()
                        .filter(artist -&gt; artist.isFrom("London"))

@@ -37,10 +37,26 @@ blockquote {
   padding-left: 10px;
 }
 
-code {
-  font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
-  font-size: 12pt;
+
+pre{
+  border: solid 1px #ccc;
+  padding: 5px;
+  overflow:auto;
+  background: #eee;
+  background-color: #fffff0;
+  color:#004080;
+  font-family:Consolas "Courier New" Fixedsys;
 }
+.code{}
+.longcode{
+  height: 200px;
+}
+.console{
+  background: #000;
+  color: #ccc;
+  font-family:"Verdana";
+}
+
 
 h1, h2, h3, #footer {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -63,6 +79,7 @@ h2 {
 h3 {
   font-size: 20px;
   line-height: 22px;
+  margin-bottom: 12px;
 }
 
 li { margin-bottom: 4px; }
