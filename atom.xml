@@ -4,10 +4,10 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  <title>Villim Wong</title>
- <link href="https://www.from0to1.net/atom.xml" rel="self"/>
- <link href="https://www.from0to1.net/"/>
+ <link href="http://villim.github.io/atom.xml" rel="self"/>
+ <link href="http://villim.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.from0to1.net/</id>
+ <id>http://villim.github.io/</id>
  <author>
    <name>Villim Wong</name>
    <email>villim218@gmail.com</email>
@@ -17,11 +17,11 @@ layout: nil
    <title>{{ post.title }}</title>
    <link href="https://www.from0to1.net{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.from0to1.net{{ post.id }}</id>
+   <id>http://villim.github.io{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
    <author>
      <name>Villim Wong</name>
-     <uri>https://www.from0to1.net</uri>
+     <uri>http://villim.github.io/</uri>
    </author>
  </entry>
  {% endfor %}
