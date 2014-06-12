@@ -1,13 +1,6 @@
 ---
 layout: post
 title: Install RPM on Ubuntu
-categories:
-- LINUX
-tags:
-- alien
-- Oracle
-- rpm
-
 ---
 
 <p>We have talked about install Oracle in 10.1o long time ago :
