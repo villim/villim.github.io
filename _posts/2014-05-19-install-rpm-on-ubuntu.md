@@ -3,9 +3,7 @@ layout: post
 title: Install RPM on Ubuntu
 ---
 
-We have talked about install Oracle in 10.1o long time ago :
-{% post_link 2010-10-26-ubuntu-10-10-5-install-database %}
- 
+We have talked about install Oracle in 10.1o long time ago : Ubuntu 10.10 开发环境配置 （五）Install Database 
 
 After these years, there's some change. First, Oracle changed the download website structure, you have to go <a title="Oracle Instant Client Downloads" href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html" target="_blank">HERE </a>now. 
 
