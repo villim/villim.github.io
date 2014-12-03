@@ -1,4 +1,4 @@
-#baseurl: /from0to1
+baseurl: http://villim.github.io/
 encoding: utf-8
 permalink:   /:title
 pygments:    true
