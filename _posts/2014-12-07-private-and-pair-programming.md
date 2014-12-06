@@ -1,10 +1,11 @@
 ---
+layout: post
 title: Private and Pair Programming
 style:
-tags: Agile
+tags: 
+- Agile
 
 ---
-
 Rest in home for a while now, while enjoying programming by myself alone these days, suddely I recall the unfinished thinking about Pair Programming long time ago.
 
 Pair Programming is the very important part when we carry out Agile in Company. As we know, They discussing the requirements, design and implementation all the time. One person coding and the other one watching and reviewing at the same time. They both know the progress so well, thus they can swith their roles easily. We've heard lots of praises for it, but after these year, testing quite many senarios with different people, I'm doubting if it really works?
