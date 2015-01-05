@@ -19,7 +19,7 @@ brew install git
 
 {% highlight bash %}
 git config --global user.name "Villim Wang"
-git config --global user.email "William.Wang@activenetwork.com
+git config --global user.email "xxx@xxx.xx"
 git config --global core.editor vim
 git config --global merge.tool vimdiff
 git config --global color.ui true
