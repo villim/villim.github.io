@@ -43,8 +43,9 @@ Ruby is required, Mac already installed Ruby, if you don't have it, need <a titl
 ##### Install Jekyll
 {% highlight bash %}
 	
-	gem install jekyll
-	gem install bundler // Not necessary, but I will use later
+	sudo gem install jekyll
+	sudo gem install bundler // Not necessary, but I will use later
+	sudo gem install github-pages
 	jekyll new test-site
 	cd test-site
 	jekyll serve
