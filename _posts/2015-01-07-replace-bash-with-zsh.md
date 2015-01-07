@@ -22,7 +22,7 @@ But the best is to replace default shell with:
 chsh -s /bin/zsh
 {% endhighlight %}
 
-
+<br/>
 ## OH-MY-ZSH
 
 In order to configure Zsh much easier, suggest using [OH-MY-ZSH](http://villim.github.io/zsh-unreadable-codes/)
@@ -33,7 +33,7 @@ Becareful, after change to use Zsh, you should modify file **.zshrc** rather tha
 export JAVA_HOME=`/usr/libexec/java_home`
 {% endhighlight %}
 
-
+<br/>
 ## ZSH Configure
 
 By the way, */usr/libexec/java_home* is the best way to refer to JDK as Apple recommended. If you installed multi JDK, you can easily swith by 
