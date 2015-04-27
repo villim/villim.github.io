@@ -136,7 +136,7 @@ Using the following Script, we will create self signed certificates for server a
 ### Standlone Jetty 9
 Add SSL connector to Server.xml. Other application server should be similiar.
 
-{% hightlight xml%}
+{% highlight xml%}
 	
 	<Connector SSLEnabled="true"
            clientAuth="true"
