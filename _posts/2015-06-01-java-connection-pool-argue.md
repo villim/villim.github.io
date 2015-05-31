@@ -46,11 +46,10 @@ database.validationQueryTimeout=10
 目前测试来看，效果良好，有待继续检验。
 
 References:
-[DBCP Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html) 
 
-[C3P0 Configuration Properties](http://www.mchange.com/projects/c3p0/#configuration_properties)
-
-[Battle of the Connection Pools](http://blog.trustiv.co.uk/2014/06/battle-connection-pools)
+* [DBCP Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html)  
+* [C3P0 Configuration Properties](http://www.mchange.com/projects/c3p0/#configuration_properties)
+* [Battle of the Connection Pools](http://blog.trustiv.co.uk/2014/06/battle-connection-pools)
 
 
                                                                                                                       
