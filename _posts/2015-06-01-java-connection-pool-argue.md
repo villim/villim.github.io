@@ -9,7 +9,7 @@ Connection Pool 是个老东西了，不过之前重来没有认真关注过。�
 最近项目使用 Hibernate 3.5.6 vs DBCP，发布测试版后，有一两天，大概碰到服务器端有网络中断后，会碰到下面的ERROR，导致系统完全无法再使用了。
 
 {% highlight bash %}
-`2015-05-27 21:42:24,958 [qtp1793329556-17] DEBUG org.springframework.orm.hibernate3.SessionFactoryUtils - Could not close Hibernate Session
+2015-05-27 21:42:24,958 [qtp1793329556-17] DEBUG org.springframework.orm.hibernate3.SessionFactoryUtils - Could not close Hibernate Session
 org.hibernate.exception.GenericJDBCException: Cannot release connection
         at org.hibernate.exception.SQLStateConverter.handledNonSpecificException(SQLStateConverter.java:140)
         at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:128)
@@ -24,7 +24,7 @@ org.hibernate.exception.GenericJDBCException: Cannot release connection
         at org.apache.commons.dbcp.PoolableConnection.close(PoolableConnection.java:114)
         at org.apache.commons.dbcp.PoolingDataSource$PoolGuardConnectionWrapper.close(PoolingDataSource.java:191)
         at org.springframework.jdbc.datasource.DataSourceUtils.doCloseConnection(DataSourceUtils.java:341)
-        at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.closeConnection(LocalDataSourceConnectionProvider.java:100)`
+        at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.closeConnection(LocalDataSourceConnectionProvider.java:100)
 {% endhighlight %}
 
 先看了一下我们使用的 DBCP1.4，真是吓了一跳，已经是 2010-2-14 发布的老家伙了。Check detail at :[DBCP Release Note](http://commons.apache.org/proper/commons-dbcp/changes-report.html). 大概应该就是从这儿开始，DBCP被骂得很厉害，网上各个地方都在爆发关于 connection pool 的讨论，出现了一大堆被不断提到的项目，C3P0、Proxool、BoneCP、HikariCP ... 就像[这篇贴子](http://stackoverflow.com/questions/520585/connection-pooling-options-with-jdbc-dbcp-vs-c3p0) 
@@ -36,18 +36,20 @@ org.hibernate.exception.GenericJDBCException: Cannot release connection
 而性能上的差异，更多应该是默认配置不同造成的，如果能够正确的配置，理论上他们的Performance应该是相差无几的。在简单的测了两个最新版也后，我们并没有发现巨大差异，所以继续选择了最新版的DBCP。关于无法关闭数据库链接的问题，首先考虑的是配置一下connection的验证。于是关心一下下面几个参数的配置。
 
 {% highlight bash %}
-`database.testOnBorrow=true
+database.testOnBorrow=true
 database.testOnReturn=true
 database.testWhileIdle=true
 database.validationQuery=select 1 from dual
-database.validationQueryTimeout=10`  
+database.validationQueryTimeout=10
 {% endhighlight %}
 
 目前测试来看，效果良好，有待继续检验。
 
 References:
 [DBCP Configuration Parameters](http://commons.apache.org/proper/commons-dbcp/configuration.html) 
+
 [C3P0 Configuration Properties](http://www.mchange.com/projects/c3p0/#configuration_properties)
+
 [Battle of the Connection Pools](http://blog.trustiv.co.uk/2014/06/battle-connection-pools)
 
 
