@@ -3,12 +3,12 @@ layout: default
 title: From0to1
 ---
 <h3 id="intro">
-	Here's the latest 5 posts! read  more in <a href="/archive.html" title="Archive">archive</a>
+Here's the latest posts! read  more in <a href="/archive.html" title="Archive">archive</a>
 </h3>
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts limit:1 %}
 <div class="post">
-	<h2 class="header"><a class="feature-link" href="{{post.url}}">{{ post.title }}</a></h1>
+	<h1 class="header"><a class="feature-link" href="{{post.url}}">{{ post.title }}</a></h1>
 	{{ post.content }}
 	<p class="signoff">
 		&mdash; {{ post.date | date: "%b %d, %Y" }}
