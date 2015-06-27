@@ -44,6 +44,7 @@ And there's special string for simplify configuration:
 |@midnight	|(same as @daily)|
 |@hourly	|Run once an hour, "0 * * * *".|
 
+
 ### List Cron Jobs
 {% highlight bash %}
 $ crontab -l
