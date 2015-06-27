@@ -46,6 +46,7 @@ And there's special string for simplify configuration:
 
 
 ### List Cron Jobs
+
 {% highlight bash %}
 $ crontab -l
 $ crontab -u username -l
@@ -53,7 +54,9 @@ $ crontab -u username -l
 
 ## Lauchd and Launchctl
 
-Instead of simple command, OSX's alternative tool is really urgly. You need to create XML .... -_-||
+Instead of simple commands, OSX's alternative tool is really urgly. 
+
+You need to create XML .... -_-||
 
 Whatever, if later have to use it. Here's a pretty good documentation. [Schedule jobs using launchd](http://nathangrigg.net/2012/07/schedule-jobs-using-launchd/)
 
