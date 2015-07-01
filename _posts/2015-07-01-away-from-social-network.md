@@ -1,6 +1,7 @@
 ---
 title: Away from social network
-layout:post
+layout: post
+
 ---
 
 人是社会的动物，所以人必然得在社交圈里生活。社交网络，这个伴随着网络而来的怪物，逐渐把我们都吞噬其中。
