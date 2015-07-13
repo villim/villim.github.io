@@ -39,12 +39,12 @@ blockquote {
 
 
 pre{
-  border: solid 1px #ccc;
-  padding: 1px 1px 1px 5px;
+  border: solid 0px #ccc;
+  padding: 2px 2px 2px 20px;
   margin: 0px 0px 10px 0px;
   overflow:auto;
   background: #eee;
-  background-color: #fffff0;
+  background-color: #F5F2F0;
   color:#004080;
   font-family:Consolas "Courier New" Fixedsys;
 }
