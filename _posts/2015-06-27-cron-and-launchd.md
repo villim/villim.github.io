@@ -8,6 +8,10 @@ It's quite usefull when want to run scripts under given date and time. At this m
 ## Cron and Crontab
 
 ### Create Cron Job
+```bash
+$ crontab -e
+```
+
 {% highlight bash %}
 $ crontab -e
 {% endhighlight %}
