@@ -19,13 +19,12 @@ layout: post
 ### Better ways to deliberately read
 
 简单来说，记住 SQ3R 方法。This technique of studying a book or other printed matter is known as SQ3R; that’s an acronym for the steps you need to take.
-
-```* Survey  : Scan the table of contents and chapter summaries for an overview.* Question: Note any questions you have.* Read    : Read in its entirety.* Recite  : Summarize, take notes, and put in your own words.* Review  : Reread, expand notes, and discuss with colleagues.
-```
+* Survey  : Scan the table of contents and chapter summaries for an overview.* Question: Note any questions you have.* Read    : Read in its entirety.* Recite  : Summarize, take notes, and put in your own words.* Review  : Reread, expand notes, and discuss with colleagues.
+ 
 其实就是之前我们说的，读书和打仗差不多，先得有“地图”，然后带着问题去学习，并做好归纳，总结和回顾。但是要注意回顾时的时间安排。
 
-```For example, you might plan on retesting yourself along a 2-2- 2-6 schedule: retest after two hours, two days, two weeks, and six months.
-```
+For example, you might plan on retesting yourself along a 2-2- 2-6 schedule: retest after two hours, two days, two weeks, and six months.
+
  
 ### Using mind maps
 
