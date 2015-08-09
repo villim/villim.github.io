@@ -13,8 +13,8 @@ layout: post
 
 书里的东西还是太多，这里只是总结一下关于如何学习的内容。要做到高阶的有效率的主动学习，有三个问题我们需要解决：
 
-1. Better ways to deliberately read and summarize written material
-2. Using mind maps to explore and find patterns and relationships3. Learning by teaching
+* Better ways to deliberately read and summarize written material
+* Using mind maps to explore and find patterns and relationships* Learning by teaching
 
 ### Better ways to deliberately read
 
