@@ -1,5 +1,3 @@
-# Practical GREP
-
 Normally we just using GREP in following way:
 
 ```bash
