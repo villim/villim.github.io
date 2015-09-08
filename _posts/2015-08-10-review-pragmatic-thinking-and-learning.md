@@ -3,16 +3,20 @@ title: Review PRAGMATIC THINKING AND LEARNING
 layout: post
 ---
 
-开始读这本《Pragmatic Thinking and Learning》前半段的时候，并没有太吸引人，还是引用了好些颇能开眼界的概念和观点，总结的还不错，只是大都从其他地方了解过了。
+开始读这本《Pragmatic Thinking and Learning》前半段的时候，并没有太吸引人，不过其实引用了好多颇能开眼界的概念和观点，总结的也还不错，只不过我大都从其他地方了解过了。
 
-不过，到了有实操性的 Debug your Mind 开始，即便是似曾相似的观点，也会变得意思起来。
+不过，从有实操性的章节 Debug your Mind 开始，即便是似曾相似的观点，也开始变得意思起来。
 
-这本书主要是说，我们平时，都是 L-Mode 的思考方式，即使说我们更关注 Verbal，Analytic，Symbolic，Abstract，Temporal，Rational，Digital，Logical，Linear。如果我们永远只是从这个方式来学习，割裂我们大脑的高级功能，我们因该掌握 R-Mode,它给我们带来了，Non-verbal,Non-rational, Synthetic, Spatial, Concrete, Intuitive, Analogic, Holistic。当我们能处理好这两个模式的和平相处，尽而相互转化，那么我们能获得最大的学习效率。
+总的来说，这本书告诉我们，平时，我们大都是用 L-Mode 的思考方式，即使说我们更关注 Verbal，Analytic，Symbolic，Abstract，Temporal，Rational，Digital，Logical，Linear。
+
+但是假使，如果我们永远只是从这个方式来学习，便割裂我们大脑的高级功能，没办法合理利用大脑，也使得学习效果大打折扣。因此，掌握 R-Mode, 它会给我们带来 Non-verbal,Non-rational, Synthetic, Spatial, Concrete, Intuitive, Analogic, Holistic。
+
+当我们能让好这两个模式的和平相处，并自然地相互转化，那么我们将获得最大的学习效率。
 
 ## Advance Learning Skill
 
 书里的东西还是太多，这里只是总结一下关于如何学习的内容。要做到高阶的有效率的主动学习，有三个问题我们需要解决：
-
+	
 * Better ways to deliberately read and summarize written material 
 * Using mind maps to explore and find patterns and relationships * Learning by teaching
 
@@ -20,8 +24,8 @@ layout: post
 
 简单来说，记住 SQ3R 方法。
 
-This technique of studying a book or other printed matter is known as SQ3R; that’s an acronym for the steps you need to take.
-* Survey  : Scan the table of contents and chapter summaries for an overview.* Question: Note any questions you have.* Read    : Read in its entirety.* Recite  : Summarize, take notes, and put in your own words.* Review  : Reread, expand notes, and discuss with colleagues.
+This technique of studying a book or other printed matter is known as SQ3R; that’s an acronym for the steps you need to take.	
+*  Survey  : Scan the table of contents and chapter summaries for an overview.*  Question: Note any questions you have.*  Read    : Read in its entirety.*  Recite  : Summarize, take notes, and put in your own words.*  Review  : Reread, expand notes, and discuss with colleagues.
  
 其实就是之前我们说的，读书和打仗差不多，先得有“地图”，然后带着问题去学习，并做好归纳，总结和回顾。但是要注意回顾时的时间安排。
 
