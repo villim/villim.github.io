@@ -27,10 +27,10 @@ git config --global color.ui true
 
 ### Alias Configuration
 {% highlight bash %}
-git config --global --system alias.st status
-git config --global --system alias.ci commit
-git config --global --system alias.co checkout
-git config --global --system alias.br branch
+git config --global [--system] alias.st status
+git config --global [--system] alias.ci commit
+git config --global [--system] alias.co checkout
+git config --global [--system] alias.br branch
 {% endhighlight %}
 
 ### Check Configuration 
