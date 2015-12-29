@@ -3,9 +3,9 @@ titile: Open FTP Service on OSX
 layout: post
 ---
 
-On the old OSX version, it was able to use GUI configure FTP under: **System Preferences -> Sharing** . Unfortunatly, it has already removed from 10.9.5
+On the old OSX version, it was able to use GUI configure FTP under: **System Preferences -> Sharing** . Unfortunatly, it has been removed from 10.9.5
 
-However, you can still easily open it in command line:
+However, you can still easily open it with command line:
 
 ## Load FTP
 {% highlight bash %}
@@ -15,7 +15,7 @@ $ sudo launchctl load /System/Library/LaunchDaemons/ftp.plist
 ## Check FTPD Status
 {% highlight bash %}
 $  sudo launchctl list | grep ftpd
-$	0	com.apple.ftpd
+	0	com.apple.ftpd
 {% endhighlight %}
 
 ## Unload FTP
@@ -25,8 +25,8 @@ $ sudo launchctl unload /System/Library/LaunchDaemons/ftp.plist
 
 ## Configure File
 {% highlight bash %}
-~  ll /etc/ftpd.*
-ftpd.conf          ftpd.conf.default  ftpusers
+$  ll /etc/ftpd.*
+	ftpd.conf          ftpd.conf.default  ftpusers
 {% endhighlight%}
 
 * FTP will use your home folder **~** as root folder
@@ -43,9 +43,11 @@ To make it more easier, I was thinking to add a Alfred Workflow.
 Then I found must use **SUDO**, although we can bypass the password. But  neither export askpass nor modify sudoers with empty password, not seems like a secure solution. I'd rather just working with a bash script.
 
 ## Using SFTP!!
-Let's rethink about why OSX removed the GUI configuration for FTP?
+Let's rethink about why OSX remove the GUI configuration for FTP?
 
 Probably, cause not too many people will use it now. And more important, it's unsafe.
 
 Right now, Apple recommend you using SSH+SFTP. You can find the configuration uder : **System Preferences -> Sharing -> Remote Login**
+
+So, if you don't have special reason, just using this one!
 
