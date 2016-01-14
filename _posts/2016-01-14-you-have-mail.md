@@ -3,7 +3,7 @@ title: You Have Mail
 layout: post
 ---
 
-## You Have Mail
+## What's the hell
 
 记不得那天开始，每次运行命令行，都会看到这样的提示：
 
