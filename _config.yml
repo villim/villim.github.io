@@ -1,6 +1,6 @@
 baseurl: http://villim.github.io/
 encoding: utf-8
 permalink:   /:title
-pygments:    true
-#highlighter:  true
+#pygments:    true
+highlighter:  rouge
 markdown:    kramdown
