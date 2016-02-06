@@ -8,34 +8,34 @@ On the old OSX version, it was able to use GUI configure FTP under: **System Pre
 However, you can still easily open it with command line:
 
 ## Load FTP
-{% highlight bash %}
+```bash
 $ sudo launchctl load /System/Library/LaunchDaemons/ftp.plist
-{% endhighlight %}
+```
 
 ## Check FTPD Status
-{% highlight bash %}
+```bash
 $  sudo launchctl list | grep ftpd
 	0	com.apple.ftpd
-{% endhighlight %}
+```
 
 ## Unload FTP
-{% highlight bash %}
+```bash
 $ sudo launchctl unload /System/Library/LaunchDaemons/ftp.plist
-{% endhighlight %}
+```
 
 ## Configure File
-{% highlight bash %}
+```bash
 $  ll /etc/ftpd.*
 	ftpd.conf          ftpd.conf.default  ftpusers
-{% endhighlight%}
+```
 
 * FTP will use your home folder **~** as root folder
 * You can configure permission lile: **umask guest 0707** , read more in **man ftpd**
 
 ## Test
-{% highlight bash %}
+```bash
 $ ftp localhost 21
-{% endhighlight%}
+```
 
 ## Alfred Workflow
 To make it more easier, I was thinking to add a Alfred Workflow. 

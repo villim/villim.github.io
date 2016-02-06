@@ -13,8 +13,7 @@ It’s known as shadowing or hiding. But when variables are overridden what will
 
 Look at the codes below, S1 and S2 are parent and child relationship:
 
-{% highlight Java %}
-
+```java
 class S1 {
 	public String s = "S1";
 	public String getS() {
@@ -28,11 +27,12 @@ class S2 extends S1{
 		return s;
 	}
 }
-{% endhighlight %}
+```
 
 And let's initialize them in following way:
 
-{% highlight Java %}
+```java
+
 S1 s1 = new S1();
 S2 s2 = new S2();
 System.out.println(s1.s); //print 1
@@ -43,8 +43,7 @@ System.out.println(s2.getS()); //print 4
 s1 = s2;
 System.out.println(s1.s);//print 5
 System.out.println(s1.getS()); //print 6
-{% endhighlight %}
-
+```
 
 # What is 5 and 6 print out?
 
@@ -71,8 +70,7 @@ but at  // print 6. It's quite different when we call method s1.getS(). Cuz S
 
 if we define S2 like this :
 
-{% highlight Java %}
-
+```java
 class S2 extends S1{
 	public String s = "S2";
 	public String getS() {
@@ -80,6 +78,5 @@ class S2 extends S1{
 }
 
 
-{% endhighlight %}
-
+```
 will print "S1" at // print 6, cuz to the parent method getS(), it  doesn't know S2.s exist.</span></span></span>

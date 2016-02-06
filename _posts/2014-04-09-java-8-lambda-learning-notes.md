@@ -33,8 +33,8 @@ what we can see is:
 
 ###Functional Interface
 Let's look at  how we usually using Runnalbe Interface at first,
-{% highlight Java %}
 
+```java
 	// AnonymousRunnable
 	Runnable r1 = new Runnable() {
     	@Override
@@ -42,30 +42,30 @@ Let's look at  how we usually using Runnalbe Interface at first,
         	System.out.println("Helloworldone!"); 
 	    }
 	};
-{% endhighlight %}
+```
 
 Runnable interface has only one abstract method which is run(), in Java8 it is defined as following
-{% highlight Java %}
 
+```java
 	@FunctionalInterface
 		public interface Runnable {
     	public abstract void run();
 	}
-{% endhighlight %}
+```
 
 And this kind of interface is called <span style="color: #339966;">**Functional Interface** : *A functional interface is an interface with a single abstract method that is used as the type of a lambda expression.*  </span> 
 
 
 After using **@FunctionalInterface** to indicate, Java will do compile check for it. So if it's a Functional Interface, we can write the code in this way in Java8.
-{% highlight Java %}
 
+```java
 	//LambdaRunnable21     
 	Runnable r2 =() -> System.out.println("Helloworldtwo!");
-{% endhighlight %}
+```
 
 In the same way, the listener in  GWT will be greatly simplified like following
-{% highlight Java %}
 
+```java
 	JButton testButton = new JButton("Test Button");
 	testButton.addActionListener(
     	new ActionListener() {
@@ -74,13 +74,13 @@ In the same way, the listener in  GWT will be greatly simplified like following
 			System.out.println("Click Detected by Anon Class");
 	     }
 	});
-{% endhighlight %}
+```
 
 By using Lambda Express, it can be simplify as:
-{% highlight Java %}
 
+```java
 	testButton.addActionListener(e -> System.out.println("Click Detected by Lambda Listner"));
-{% endhighlight %}	
+```	
 
 We already see that we can pass a lambda express as parameter to a Method, every Java parameter has a type, but what is the Type of a Lambda?
 
@@ -96,8 +96,8 @@ In java.util.function package, Java8 bring some new stuff, you should read the J
 
 
 Let's Just use a simple example to illustrate how predicate and Consumer works.
-{% highlight Java %}
 
+```java
 	public static Student updateStudentFee(Student student,
       Predicate<Student> predicate,
       Consumer<Student> consumer){
@@ -114,11 +114,11 @@ Let's Just use a simple example to illustrate how predicate and Consumer works.
 	student1 = updateStudentFee(student1,
       student -> student.grade > 8.5,//Lambda expression for Predicate interface
       student -> student.feeDiscount = 30.0);//Lambda expression for Consumer inerface
-{% endhighlight %}	
+```
 
 When you checking the source code of Function you will find it like this
-{% highlight Java %}
 
+```java
 	@FunctionalInterface
 	public interface Function<T, R> {
     	R apply(T t);
@@ -131,7 +131,7 @@ When you checking the source code of Function you will find it like this
     	    return t -> t;
     	}
 	}
-{% endhighlight %}
+```
 
 we can learn several things here:
 
@@ -152,8 +152,8 @@ Of course, when modelling your problem domain, you need to think about this trad
 Basically, Java become DANGEROUS too now, if you can't understand the language well. But you can't have your cake and eat it too. Programming is never a easy work that everybody can do. The other hand, the benefit is more valuable.
 
 When these interfaces have a same method signature method, it will becoming tricky, like this
-{% highlight Java %}
 
+```java
 	public interface Jukebox {
     	public default String rock() {
         	return "... all over the world!"; 
@@ -167,19 +167,18 @@ When these interfaces have a same method signature method, it will becoming tric
 	}
 	
 	public class MusicalCarriage implements Carriage, Jukebox { }
-{% endhighlight %}
-
+```
 
 Java compiler won't know which one should be invoked, and will give Error. You can solve it in this way:
-{% highlight Java %}
 
+```java
 	public class MusicalCarriage implements Carriage, Jukebox {
 		@Override
 		public String rock() {
     	   	return Carriage.super.rock();
 		} 
 	}
-{% endhighlight %}
+```
 
 ####Three Rules  to Remember
 
@@ -198,8 +197,8 @@ If you’re ever unsure of what will happen with default methods or with multipl
 ###Lambda use Value
 
 one last thing is when Lambda manipulate value, we need be careful
-{% highlight Java %}
 
+```java
 	String name = getUserName();
 	button.addActionListener(event -> System.out.println("hi " + name));
 
@@ -207,23 +206,23 @@ one last thing is when Lambda manipulate value, we need be careful
 	name = formatUserName(name);
 	// will throw Exception
 	button.addActionListener(event -> System.out.println("hi " + name));
-{% endhighlight %}	
+```
 
 local variables referenced from a lambda expression must be final or effectively final. Java didn't force use to announce it final just for friendly.
 
 ###Method Reference
 
 A common idiom you may have noticed is the creation of a lambda expression that calls a method on its parameter. If we want a lambda expression that gets the name of an artist, we would write the following:
-{% highlight Java %}
 
+```java
 	artist -> artist.getName()
-{% endhighlight %}
+```
 
 This is such a common idiom that there’s actually an abbreviated syntax for this that lets you reuse an existing method, called a method reference. If we were to write the previous lambda expression using a method reference, it would look like this:
-{% highlight Java %}
 
+```java
 	Artist::getName
-{% endhighlight %}
+```
 
 As Lambda coming, it greatly changed how we use Collection. And Collection is another big part of Java8. It's such a monster, let's make another note later.
 

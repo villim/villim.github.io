@@ -28,7 +28,7 @@ For using Openssl, read more at [How to create a self-signed SSL Certificate](ht
 About Openssl, I encounter some problem with version 0.9.8, after research, it seems there's some defect their. I would suggest you upgrade to latest version. I upgraded to 1.0.1k.
 
 Using the following Script, we will create self signed certificates for server and client.
-{% highlight bash %}
+```bash
 
     #!/bin/bash
  	PASSWORD=password
@@ -98,13 +98,13 @@ Using the following Script, we will create self signed certificates for server a
 	###############################
 	echo "----- Successfully Create all certificates -----"
 
-{% endhighlight %}
+```
 
 ## SSL Configuration
 
 ### maven-jetty-plugin 6.1.26
 
-{% highlight xml %}
+```xml
 
 	<plugin>
       <groupId>org.mortbay.jetty</groupId>
@@ -131,12 +131,12 @@ Using the following Script, we will create self signed certificates for server a
           <jettyConfig>${basedir}/src/test/jetty.xml</jettyConfig>
       </configuration>
 	</plugin>
-{% endhighlight %}
+```
 
 ### Standlone Jetty 9
 Add SSL connector to Server.xml. Other application server should be similiar.
 
-{% highlight xml%}
+```xml
 	
 	<Connector SSLEnabled="true"
            clientAuth="true"
@@ -152,7 +152,7 @@ Add SSL connector to Server.xml. Other application server should be similiar.
            protocol="org.apache.coyote.http11.Http11Protocol"
            redirectPort="8443"
 	   scheme="https" />
-{% endhighlight %}
+```
 
 After restarted, you should be able to connect with HTTPS now.
 
@@ -163,14 +163,14 @@ After restarted, you should be able to connect with HTTPS now.
 
 I'm using Spring 4, the configuration is very easy, just change Spring security configuration.
 
-{% highlight xml %}
+```xml
 
     <http>
         <intercept-url pattern="/**" access="hasRole('ROLE_USER')" /> 
         <x509 subject-principal-regex="CN=(.*?)," /> 
         <logout/>
     </http>
-{% endhighlight %}
+```
 
 ### Test with Browser and SoapUI
 

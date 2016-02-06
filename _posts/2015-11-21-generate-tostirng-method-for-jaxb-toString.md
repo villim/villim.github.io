@@ -8,7 +8,7 @@ When I want to see the toString from a auto generated JAXB class, just found the
 You just need plugin for **maven-jaxb2-plugin**.
 Here's my cofiguration:
 
-{% highlight xml %}
+```xml
     <build>
         <plugins>
             <plugin>
@@ -41,14 +41,14 @@ Here's my cofiguration:
             </plugin>
         </plugins>
     </build>
-{% endhighlight %}
+```
 
 
 The only problem is , the genrated toString() not readable at all. Luck, we can create our own toStringStrategy.
  
  
  
-{% highlight java %}
+```java
  package io.github.villim;
 
 import java.util.Arrays;
@@ -85,4 +85,4 @@ public class MyToStringStrategy implements ToStringStrategy {
     }
 }
 
-{% endhighlight %}
+```

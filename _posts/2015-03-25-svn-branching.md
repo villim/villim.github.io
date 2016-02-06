@@ -18,94 +18,94 @@ Trunk is the usually the reliable and workable source base for release. We shoul
 ### Hints
 
 You can easily get **[trunk-url]** by
-{% highlight bash %}
+```bash
 cd [trunk-working-copy-path]
 svn info
-{% endhighlight %}
+```
 
 ### Create branch:
-{% highlight bash %}
+```bash
 svn copy [trunk-url] [branch-url] -m "{story-id} create branch" 
-{% endhighlight %}
+```
 
 ### Merge from trunk to branch
 
 While you working on Branch, Trunk is updated. You should merge from trunk ASAP
 
 (1) Make sure you don't have local modification
-{% highlight bash %}
+```bash
 cd [branch-working-copy-path]
 svn status 
-{% endhighlight %}
+```
 
 (2) Update before merge
-{% highlight bash %}
+```bash
 svn update
-{% endhighlight %}
+```
 
 (3) While merging there may have confilicts, chose POSTPONE to solve them later
-{% highlight bash %}
+```bash
 svn merge [trunk-url]
-{% endhighlight %}
+```
 
 (4) After solve conflicts, commit
-{% highlight bash %}
+```bash
 svn commit -m "merge from trunk" 
-{% endhighlight %}
+```
 
 ### Merge from Branch to Trunk
 
 Before merge branch to trunk, make sure **merge from to branch** to let branch code contains latest trunk changes.
 
 (1) Make sure you don't have local modification
-{% highlight bash %}
+```bash
 cd [trunk-working-copy-path] 
 svn status 
-{% endhighlight %}
+```
 
 (2) Update before merge
-{% highlight bash %}
+```bash
 svn update
-{% endhighlight %}
+```
 
 (3) Encounter confilicts during merge, just trust Branch's version
-{% highlight bash %}
+```bash
 svn merge --reintegrate [branch-url]
-{% endhighlight %}
+```
 
 (4) This commit reversion is [latest-merge-reversion-of-turnk] for later use
-{% highlight bash %}
+```bash
 svn commit -m "merge from branch for {story-id} "   
-{% endhighlight %}
+```
 
 (5) If merge failed, you can revert by
-{% highlight bash %}
+```bash
 svn revert -R [trunk-working-copy-path]
-{% endhighlight %}
+```
 
 ### Continue Working on a Merged Branch
 
 After branch merge into trunk, there would be conflicts when you merge the second time. So we have to do record only to avoid confilicts.
  
 (1) Make sure you don't have local modification
-{% highlight bash %}
+```bash
 cd [branch-working-copy-path]
 svn status
-{% endhighlight %}
+```
 
 (2) Update before merge
-{% highlight bash %}
+```bash
 svn update
-{% endhighlight %}
+```
 
 (3) Record only merge
-{% highlight bash %}
+```bash
 svn merge --record-only -c [latest-merge-reversion-of-turnk] [trunk-url]
 svn commit -m "record only at reversion {latest-merge-reversion-of-turnk} " 
-{% endhighlight %}
+```
  
 (4) Then you can just get latest trunk changes as before
-{% highlight bash %}
+```bash
 svn merge [trunk-url]
 svn commit -m "merge from trunk after record only"
-{% endhighlight %}
+```

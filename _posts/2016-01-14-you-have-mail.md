@@ -7,22 +7,22 @@ layout: post
 
 记不得那天开始，每次运行命令行，都会看到这样的提示：
 
-{% highlight bash %}
+```bash
 Last login: Thu Jan 14 14:56:23 on ttys004
 You have mail.
 $ > 
-{% endhighlight%}
+```
 
 之前偷懒，一直选择直接忽略，不过每天都看到还是太扎眼了，今天终于看不过去了。用 mail 命令看了一下：
 
-{% highlight bash %}
+```bash
 ➜  ~  mail
 Mail version 8.1 6/6/93.  Type ? for help.
 "/var/mail/williamwang": 5 messages 5 unread
 >U  1 williamwang@wl000701  Wed Jun 10 14:02  20/871   "Cron <williamwang@wl00070178> /Users/williamwang/xxx"
  U  2 williamwang@wl000701  Wed Jun 10 15:02  20/928   "Cron <williamwang@wl00070178> /Users/williamwang/xxx/xxx.sh"
  ... ...
-{% endhighlight%}
+```
 
 原来是因为之前测试 cron job 造成的，没什么大不了。接下来我想删掉这些邮件时，却做了一个很吊诡的事情，我竟然是先去 Google 了！
 
@@ -32,7 +32,7 @@ Mail version 8.1 6/6/93.  Type ? for help.
 
 用 help 看一下，一切都很清晰了，就不需要解释了
 
-{% highlight bash %} 
+```bash 
 $ help
     Mail   Commands
 t <message list>		type messages
@@ -51,12 +51,12 @@ x				quit, do not remove system mailbox
 h				print out active message headers
 !				shell escape
 cd [directory]			chdir to directory or home if none given
-{% endhighlight %}
+```
 
 如果你要禁用 Mail，添加配置
-{% highlight bash %}
+```bash
 $ vim ~/.zshrc  -- Add this line "unset MAILCHECK" 
-{% endhighlight %}
+```
 
 ## The Pain of Google 
 

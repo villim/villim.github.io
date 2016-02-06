@@ -7,10 +7,10 @@ tags: Java
 
 When creating Socket in Java, we have to specify PORT NUMBER. 
 
-{% highlight java %}
+```java
 Socket(InetAddress address, int port)
 //Creates a stream socket and connects it to the specified port number at the specified IP address.
-{% endhighlight %}
+```
 
 But, what's the maximum number of port ? Just find myself not clear about it.
 

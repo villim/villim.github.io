@@ -41,7 +41,7 @@ Don't waste time anymore, let's do it~
 Ruby is required, Mac already installed Ruby, if you don't have it, need <a title="Install Ruby" herf="http://www.rubyinstaller.org/downloads/" target="_blank">install by yourself</a>
 
 ##### Install Jekyll
-{% highlight bash %}
+```bash
 	
 	sudo gem install jekyll
 	sudo gem install bundler // Not necessary, but I will use later
@@ -51,7 +51,7 @@ Ruby is required, Mac already installed Ruby, if you don't have it, need <a titl
 	jekyll serve
 	# Browse to http://localhost:4000 you should see it's working now
 		
-{% endhighlight %}
+```
 
 #### Creating Github Pages
 
@@ -61,14 +61,14 @@ Find how Gibthub Pages work costing me a lot of time. But infact, it's not defic
 
 ##### Project Pages
 Every project can create it's own page, but the branch must be **gh-pages**
-{% highlight bash %}
+```bash
 	
 	$ git init
 	$ git checkout --orphan gh-pages
 	$ git remote add origin https://github.com/username/jekyll_demo.git
 	$ git push origin gh-pages
 	
-{% endhighlight %}
+```
 
 Github we generate url with project name like this :
 	
@@ -83,14 +83,14 @@ User Pages must create repository as name : **UserName.github.io**
 
 Each user can create only one User Page. And you don't need set baseurl anymore.
 
-{% highlight bash %}
+```bash
 	
 	$ git init	
 	$ git checkout master
 	$ git remote add origin https://github.com/username/username.github.io
 	$ git push origin master
 	
-{% endhighlight %}
+```
 
 #### Create your Website
 
@@ -110,12 +110,12 @@ Then I tried <a title="Jekyll Importer Tool" href="http://import.jekyllrb.com/" 
 2. Tools -> Export -> Choose 'All content' -> Download Export File (mine is from0to1.wordpress.2014-06-11.xml)
 3. Run following script
 
-{% highlight bash %}
+```bash
 		
 	$ cd tempdir
 	$ ruby -rubygems -e 'require "jekyll-import"; 	JekyllImport::Importers::WordpressDotCom.run({ "source" => "/Users/villim/	Documents/from0to1.wordpress.2014-06-11.xml" })'
 	
-{% endhighlight %}
+```
 
 Then you will find all posts in **tempdir** 
 
@@ -134,7 +134,7 @@ And I do enjoy this progress. I learn a lot from this site : <a href="http://www
 
 ##### Pygments
 In order to make code area beautiful, there're many ways, directly using JavaScript is also possible, but after tried, I stick to using official way, Pygments.
-	{% highlight bash %}
+	```bash
 		
 	$ easy_install Pygments	
 	$ python   //checking what styles can be used
@@ -144,7 +144,7 @@ In order to make code area beautiful, there're many ways, directly using JavaScr
 	
 	// generate the highlighting css file to your project directory
 	$ pygmentize -S friendly -f html > /project-dir/css/Pygments.css
-	{% endhighlight %}
+	```
 	
 After that, just include it in **_layout/defalut.html**
 
@@ -188,7 +188,7 @@ Then you just need to run the serve.sh and leave it alone, when posts changes, i
 After importing the WordPress data, these posts are all endwith `.html`
 
 So I create a script to renaming automactically:
-{% highlight bash %}
+```bash
 	
 	$ python
     >>> import os
@@ -197,7 +197,7 @@ So I create a script to renaming automactically:
 	...     os.rename(filename, root+'.md')
 	... 
 	
-{% endhighlight %}
+```
 
 ### Personal Feeling
 

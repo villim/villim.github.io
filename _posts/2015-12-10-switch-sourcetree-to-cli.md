@@ -27,15 +27,15 @@ One of the best freature of SourceTree is, you can see all the activities in the
 Lucky, there's a replacement in CLI, called **tig**. Checkout their page [here](https://github.com/jonas/tig).
 
 ### Insall tig
-{% highlight bash %}
+```bash
 $ brew install tig
-{% endhighlight %}
+```
 
 ### Usng tig
-{% highlight bash %}
+```bash
 $ cd your-project-dir
 $ tig
-{% endhighlight %}
+```
 
 just with 'tig' command you will see the colored picture of all the branches. type in 'h' to see more guide. 
 
@@ -46,55 +46,55 @@ It's a great took, need keeping eye on it.
 ## Check Branches 
 
 ### Show Branches
-{% highlight bash %}
+```bash
 $ cd <your-project-dir>
 $ git branch 				#show local branch
 $ git branch -r 			#show remote branch
 $ git branch -a 			#show all branch
-{% endhighlight %}
+```
 
 ### Show Deitaled Branches
-{% highlight bash %}
+```bash
 $ git remote show origin
-{% endhighlight %}
+```
 
 Here we can see all the remote branches, and the ones we checkout and their status. ( whether out of date )
 
 ### Checkout and Detele Branches
-{% highlight bash %}
+```bash
 $ git checkout master   # checkout master branch
 $ git checkout -b <branch-name>  # create and switch to a local branch
 $ git branch -D/d <branch-name>  #  delete local branch. D means --delete --force
 $ git checkout -b <remote-branch-name> origin/<remote-branch-name>  # checkout and switch to a remote branch
 $ git push origin --delete <remote-branch-name>  # delete a remote branch
-{% endhighlight %}
+```
 
 ### Prune unexisted remote branch
-{% highlight bash %}
+```bash
 $ git remote prune origin
 $ git fetch -p  # Same function as previous one
-{% endhighlight %}
+```
 
 ## Tag
-{% highlight bash %}
+```bash
 $ git push --tags   # push local tag to remote
 $ git fetch origin tag <tagname> 		# get remote tag
 $ git push origin --delete tag <tagname>   # delete remote tag
-{% endhighlight %}
+```
 
 ## Stash
-{% highlight bash %}
+```bash
 $ git stash  # save working copies to stash
 $ git stash list  # view stash
 $ git stash apply  # get stashed files
 $ git stash branch <branch-name>  # create branch from stash
-{% endhighlight %}
+```
 
 ## Other commands
-{% highlight bash %}
+```bash
 $ git clean -d [-n | -f]   # clean project, use -n for dry run, -f for force remote
 $ git reset  # dierctly delete prvious commit, HEAD move backward
 $ git revert  # a new commit with reversed info to delete privious commit, HEAD move forward
-{% endhighlight%}
+```
 
 With these commands, you should be good to conitune CLI now.

@@ -19,22 +19,22 @@ tags:
 
 <p>Let's see a example, previously, we have to do loops like</p>
 
-{% highlight Java %}
+```java
 	int count = 0;
 		for (Artist artist : allArtists) {
 	  	if (artist.isFrom("London")) { 
         	count++;
 	} }
 
-{% endhighlight%}
+```
 	
 But with Stream, you can make a much clean code like
-{% highlight Java %}
+```java
 	long count = allArtists.stream()
     	.filter(artist -> artist.isFrom("London"))
         .count();
 
-{% endhighlight%}
+```
 
 So, A Stream is a tool for building up complex operations on collections using a functional approach.  We can also simply describe the change of Collections as from external iteration to **internal iteration**.
 
@@ -45,40 +45,36 @@ The Stream Interface provide quite many methods to facilitate using collections
 
 If you've got a function that converts a value of one type into another, map lets you apply this function to a stream of values, producing another stream of the new values.
 
-{% highlight Java %}
-
+```java
 	List<String> collected = Arrays.asList("a", "b", "hello")
 	     .stream()
          .map(string -> string.toUpperCase())
          .collect(Collectors.toList());
-{% endhighlight%}
+```
 
 ####FILTER
 Any time you’re looping over some data and checking each element, you might want to think about using the new filter method on Stream
 
-{% highlight Java %}
-
+```java
 	List<String> beginningWithNumbers = Arrays.asList("a", "1abc", "abc1")
 	    .stream()
     	.filter(value -> isDigit(value.charAt(0)))
         .collect(Collectors.toList());
-{% endhighlight%}     
+```     
 
 ####FLATMAP
 flatMap lets you replace a value with a Stream and concatenates all the streams together.
 
-{% highlight Java %}
-
+```java
 	List<Integer> together = Arrays.asList(Arrays.asList(1, 2)
 		, Arrays.asList(3, 4))
 		.stream()
 		.flatMap(numbers -> numbers.stream()).collect(Collectors.toList());
-{% endhighlight%}
+```
 
 ####MAX and MIN
 
-{% highlight Java %}
-
+```java
 	List<Track> tracks = Arrays.asList(new Track("Bakai", 524),
     	new Track("Violets for Your Furs", 378),
 		new Track("Time Was", 451));
@@ -86,14 +82,13 @@ flatMap lets you replace a value with a Stream and concatenates all the streams
 	Track shortestTrack = tracks.stream()
         .min(Comparator.comparing(track -> track.getLength()))
         .get();
-{% endhighlight%}
+```
         
 ####REDUCE
 
 Use the reduce operation when you've got a collection of values and you want to generate a single result.
 
-{% highlight Java %}
-
+```java
 	int count = Arrays.asList(1, 2, 3).stream()
     	.reduce(0, (acc, element) -> acc + element);
 	assertEquals(6, count);
@@ -102,91 +97,91 @@ Use the reduce operation when you've got a collection of values and you want to 
 	String concatation = numerals.stream()
            .reduce("", String::concat); //same as (s1,s2) -> s1 + s2
 	assertEquals("1234", concatation);
-{% endhighlight%}
+```
 
 ####ADVANCE STREAM OPERATIONS
 
 #####Element Ordering
 
-{% highlight Java %}
+```java
 
 	Set<Integer> numbers = new HashSet<>(Arrays.asList(4, 3, 2, 1));
 	List<Integer> sameOrder = numbers.stream()
                                      .sorted()
                                      .collect(Collectors.toList());
 	assertEquals(asList(1, 2, 3, 4), sameOrder);
-{% endhighlight%}
+```
 
 #####Collector Interface
 As we already seen a lot of **.collect(toSet()) **and **.collect(toList()) **. Usually, we use a List to produce from a Stream, but we can also generate Map or Set.
 
 #####Collecting into a custom collection
 
-{% highlight Java %}
+```java
 
 	stream.collect(toCollection(TreeSet::new));
-{% endhighlight%}
+```
 	
 #####Collecting into Values
 It’s also possible to collect into a single value using a collector. There are maxByand minBy collectors that let you obtain a single value according to some ordering.
 
-{% highlight Java %}
+```java
 
 	public Optional<Artist> biggestGroup(Stream<Artist> artists) {
       Function<Artist,Long> getCount = artist -> artist.getMembers().count();
       return artists.collect(Collectors.maxBy(Comparator.comparing(getCount)));
 	}
-{% endhighlight%}
+```
 
 and even can get average number
 
-{% highlight Java %}
+```java
 
 	public double averageNumberOfTracks(List<Album> albums) {
     	return albums.stream()
                     .collect(Collectors.averagingInt(album -> 				 	              album.getTrackList().size()));
 	}
-{% endhighlight%}
+```
 	
 #####Partitioning the Data
 you might want to do with a Stream is partition it into two collections of values.
 
-{% highlight Java %}
+```java
 
 	public Map<Boolean, List<Artist>> bandsAndSoloRef(Stream<Artist> artists) { 
       return artists.collect(Collectors.partitioningBy(Artist::isSolo));
 	}
-{% endhighlight%}
+```
 
 #####Grouping the Data
 you need partitioning then you also can grouping
 
-{% highlight Java %}
+```java
 
 	public Map<Artist, List<Album>> albumsByArtist(Stream<Album> albums) { 
       return albums.collect(Collectors.groupingBy(album -> 							album.getMainMusician()));
 	}
-{% endhighlight%}
+```
 	
 #####Strings
 it's quite often, I want to concatenate Strings with collection value as some kind of standard, like "[AA, BB, CC, DD, EE]"
 
 And now it's very convenient to do that.
 
-{% highlight Java %}
+```java
 
 	String result = artists.stream()
                            .map(Artist::getName)
                            .collect(Collectors.joining(",", "[", "]"));
 
-{% endhighlight%}
+```
 
 ####WHAT'S THE PROBLEM STREAM ?
 
 #####How to print the looping items
 we can use **.forEach()**, but we can't continue operate on stream any more.
 
-{% highlight Java %}
+```java
 
 	album.getMusicians()
      .filter(artist -> artist.getName().startsWith("The"))
@@ -197,18 +192,18 @@ we can use **.forEach()**, but we can't continue operate on stream any more.
      .filter(artist -> artist.getName().startsWith("The"))
      .map(artist -> artist.getNationality())
      .collect(Collectors.<String>toSet());
-{% endhighlight%}
+```
      
 Lucky, we have a solution to use **peek()**
 
-{% highlight Java %}
+```java
 
 	Set<String> nationalities= album.getMusicians()
        .filter(artist -> artist.getName().startsWith("The"))
        .map(artist -> artist.getNationality())
        .peek(nation -> System.out.println("Found nationality: " + nation))
        .collect(Collectors.<String>toSet());
- {% endhighlight%}
+ ```
        
 #####Can't handle Exception, can't break the iteration
 In previous for loop, some if we may need **breakor** and **continue** on some condition, but not able to do it in Stream.
@@ -218,7 +213,7 @@ In previous for loop, some if we may need **breakor** and **continue** on some c
 Although you may not feeling convenient at the beginning, but once you do familiar with this new grammar, you will see it's really easy to do internal iteration.</p>
 <p>beside that, the most powerful function should be **Parallelism.** There're a lot parallel methods, let's see a example.
 
-{% highlight Java %}
+```java
 
 	public int parallelArraySum() {
     	return albums.parallelStream()
@@ -226,7 +221,7 @@ Although you may not feeling convenient at the beginning, but once you do famili
                  .mapToInt(Track::getLength)
                  .sum();
 	}
-{% endhighlight%}
+```
 	
 It's obviously what Parallelism can bring, but you have to be careful, not all situations is able to do it.
 

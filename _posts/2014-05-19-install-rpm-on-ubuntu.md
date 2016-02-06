@@ -12,25 +12,25 @@ And Oracle didn't provide installer for non-rpm environment. I don't want to con
 <span style="color: #008000;"> alien is a program that converts between Red Hat rpm, Debian deb, Stampede slp, Slackware tgz, and Solaris pkg file formats. If you want to use a package from another linux distribution than the one you have installed on your system, you can use alien to convert it to your preferred package format and install it. It also supports LSB packages. </span>
 
 **First, you have to install alien**
-{% highlight bash %}	
+```bash	
 	sudo apt-get install alien
-{% endhighlight %}
+```
 
 **Then just install the RPM like**
-{% highlight bash %}
+```bash
 
 	sudo alien -i oracle-instantclient-basic-10.2.0.5-1.i386.rpm
-{% endhighlight %}
+```
 
 That's really easy and  wonderful ~
 Infact, using "-i" alien first convert .rpm to .deb file. You can do it manually by
-{% highlight bash %}
+```bash
 
 	sudo alien -k oracle-instantclient-basic-10.2.0.5-1.i386.rpm
-{% endhighlight %}
+```
 
 **and then install deb file:**
-{% highlight bash %}
+```bash
 
 	sudo dpkg -i oracle-instantclient-basic_10.2.0.5-1_i386.deb
-{% endhighlight %}
+```

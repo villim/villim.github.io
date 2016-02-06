@@ -9,19 +9,19 @@ It's quite usefull when want to run scripts under given date and time. At this m
 
 ### Create Cron Job
 
-{% highlight bash %}
+```bash
 $ crontab -e
-{% endhighlight %}
+```
 
 You can add one line like:
-{% highlight bash %}
+```bash
 1 2 3 4 5 /path/to/command arg1 arg2
 or
 1 2 3 4 5 /root/backup.sh
-{% endhighlight %}
+```
 
 ### The Cron job definition
-{% highlight bash %}
+```bash
 * * * * * command to be executed
 - - - - -
 | | | | |
@@ -30,7 +30,7 @@ or
 | | --------- Day of month (1 - 31)
 | ----------- Hour (0 - 23)
 ------------- Minute (0 - 59)
-{% endhighlight %}
+```
 
 And there's special string for simplify configuration:
 
@@ -48,10 +48,10 @@ And there's special string for simplify configuration:
 
 ### List Cron Jobs
 
-{% highlight bash %}
+```bash
 $ crontab -l
 $ crontab -u username -l
-{% endhighlight %}
+```
 
 ## Lauchd and Launchctl
 

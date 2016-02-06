@@ -19,14 +19,14 @@ author:
 
 ## 先看这个小程序会打印出什么值：
 
-{% highlight java %}
+```java
 package net.villim.www;
 public class TestFloat {
 	public static void main(String[] args) {
 		System.out.println(2.0 - 1.1);
 	}
 }
-{% endhighlight %}
+```
 
 当然不会那么简单，**绝对不可能是 0.9**!! 
 
