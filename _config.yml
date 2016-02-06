@@ -3,4 +3,4 @@ encoding: utf-8
 permalink:   /:title
 pygments:    true
 #highlighter:  true
-markdown:    rdiscount
+markdown:    kramdown
