@@ -54,6 +54,7 @@ fg JOBS-ID
 %JOBS-ID
 ```
 Another scenario is : Restart suspended job and put it to background with
+
 ```bash
 %JOBS-ID &
 ```
