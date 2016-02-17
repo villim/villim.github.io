@@ -1,8 +1,8 @@
 ---
 title: Cron & Launchd
 layout: post
-
 ---
+
 It's quite usefull when want to run scripts under given date and time. At this moment, you will need Cron (for Unix/Linux) and Lauchd (OSX).
 
 ## Cron and Crontab
@@ -13,15 +13,24 @@ It's quite usefull when want to run scripts under given date and time. At this m
 $ crontab -e
 ```
 
-You can add one line like:
+You can add one line like folliwng:
+
 ```bash
-1 2 3 4 5 /path/to/command arg1 arg2
+1 2 3 4 5 /path/to/command.sh arg1 arg2
+```
 or
-1 2 3 4 5 /root/backup.sh
+
+```bash
+1 2 3 4 5 /root/command.sh
 ```
 
+This means to run command.sh with parameter or not.
+
 ### The Cron job definition
-```bash
+
+The most sophiscated stuff is the cron expression, like previous "1 2 3 4 5 " what does it means?
+
+```
 * * * * * command to be executed
 - - - - -
 | | | | |
@@ -32,19 +41,25 @@ or
 ------------- Minute (0 - 59)
 ```
 
+### Special String
 And there's special string for simplify configuration:
 
-|Special string	|Meaning|
-| ------------ | ------------- | 
-|@reboot	|Run once, at startup.|	
-|@yearly	|Run once a year, "0 0 1 1 *".|
-|@annually	|(same as @yearly)|
-|@monthly	|Run once a month, "0 0 1 * *".|
-|@weekly	|Run once a week, "0 0 * * 0".|
-|@daily	    |Run once a day, "0 0 * * *".|
-|@midnight	|(same as @daily)|
-|@hourly	|Run once an hour, "0 * * * *".|
+| Special String 	| Meaning |
+| ------------  	| ------------ | 
+| @reboot	      	| Run once, at startup. |
+| @yearly			| Run once a year, "0 0 1 1 *". |
+| @annually		| (same as @yearly) |
+| @monthly		| Run once a month, "0 0 1 * *". |
+| @weekly			| Run once a week, "0 0 * * 0". |
+| @daily	    	| Run once a day, "0 0 * * *". |
+| @midnight		| (same as @daily) |
+| @hourly			| Run once an hour, "0 * * * *". |
 
+This means, you can wirte like this:
+
+```bash
+@daily /root/command.sh
+```
 
 ### List Cron Jobs
 
@@ -52,6 +67,7 @@ And there's special string for simplify configuration:
 $ crontab -l
 $ crontab -u username -l
 ```
+
 
 ## Lauchd and Launchctl
 
