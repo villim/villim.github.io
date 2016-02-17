@@ -7,7 +7,7 @@ There were a old post about [Crontab](http://villim.github.io/cron-and-launchd),
 
 However, it's not that different, quite similar.
 
-Folliwing is from Quartz document, I just copy few frequently used. Read more at[here](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger)
+Folliwing is from Quartz document, I just copy few frequently used. Read more at [here](http://www.quartz-scheduler.org/documentation/quartz-1.x/tutorials/crontrigger)
 
 ## Spring Quartz Cron Expression
 
