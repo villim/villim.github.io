@@ -3,8 +3,7 @@ title: 爱书还是爱读书？
 layout: post
 ---
 
-![2016 World Book Day](../img/2016-world-book-day.jpg)
-<img src="../img/2016-world-book-day.jpg" />
+![2016 World Book Day](http://villim.github.io/img/2016-world-book-day.jpg)
 
 今天是世界读书日(World Book Day)，作为一个假读书人，除了到书屋附庸一番，免不了还想说两句。
 
