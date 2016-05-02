@@ -1,21 +1,8 @@
 ---
 layout: post
 title: Software Pricing
-categories:
-- NOTES
-tags: []
-status: draft
-type: post
-published: false
-meta:
-  _edit_last: '1'
-author:
-  login: villim
-  email: villim@126.com
-  display_name: Villim
-  first_name: Villim
-  last_name: Wong
 ---
+
 <p>说起来惭愧，作为一个程序员， 从大学毕业后这么多年使用 Windows<br />
 的岁月里，自己的电脑里一直用的都是盗版软件。读大学时还可以说“研究”，工作后只能说是死皮赖脸归结于工资太低（虽然这也是事实^_^)<br />
 。直到 08 年开始意识到这个问题，开始使用 Ubuntu，软件也全部都换成了<br />
