@@ -3,6 +3,8 @@ title: Escape Meetings
 layout: post
 ---
 
+![Dilbert Meeting](http://villim.github.io/img/2016/dilbert-meeting.jpg)
+
 The most annoying work routine is MEETING!
 
 If these meetings are just meetups, with music, food and beer, everybody chating technique details. That would be amazing, nevertheless, that can never be real.
