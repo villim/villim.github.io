@@ -18,12 +18,9 @@ Vim's regular expression syntax is more like POSIX. So when I need match a date 
 
 Have to use quite many excape characters. After using **VERY MAGIC**
 
-```
-\v (lowercase) : 
 
-all the other charecters have special meaning except **_**, **-**, **0-9** and **a-zA-Z**
+**\v (lowercase):** all the other charecters have special meaning except **_**, **-**, **0-9** and **a-zA-Z**
 
-```
 
 So using VERY MAGIC, it will be much more readable.
 
@@ -33,11 +30,9 @@ So using VERY MAGIC, it will be much more readable.
 
 ### very nomagic : search as literal meaning
 
-```
-\V (uppercase) : 
 
-all the characters has their literal meaning and must use \ for escape meanning.
-```
+**\V (uppercase): ** all the characters has their literal meaning and must use \ for escape meanning.
+
 
 
 ## Advance Subsitute
