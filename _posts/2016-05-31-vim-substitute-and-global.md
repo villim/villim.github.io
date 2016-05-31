@@ -8,9 +8,13 @@ Wanted to modify a xml file, there were some scenarios I need to modify or delet
 ## VERY MAGIC & NOMAGIC
 
 ### very magic : search as regular
+
 Vim's regular expression syntax is more like POSIX. So when I need match a date like "2016-06-01", the regular is 
 
-```\d\{4\}-\d\{2\}-\d\{2\}/```
+
+```
+\d\{4\}-\d\{2\}-\d\{2\}/
+```
 
 Have to use quite many excape characters. After using **VERY MAGIC**
 
