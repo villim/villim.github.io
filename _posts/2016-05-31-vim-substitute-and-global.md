@@ -12,21 +12,27 @@ Wanted to modify a xml file, there were some scenarios I need to modify or delet
 Vim's regular expression syntax is more like POSIX. So when I need match a date like "2016-06-01", the regular is 
 
 
-```
+```bash
 \d\{4\}-\d\{2\}-\d\{2\}/
 ```
 
 Have to use quite many excape characters. After using **VERY MAGIC**
 
-```\v (lowercase): all the other charecters have special meaning except **_**, **-**, **0-9** and **a-zA-Z**```
+```
+\v (lowercase): all the other charecters have special meaning except **_**, **-**, **0-9** and **a-zA-Z**
+```
 
 So using VERY MAGIC, it will be much more readable.
 
-```\v\d{4}-\d{2}-\d{2}```
+```bash
+\v\d{4}-\d{2}-\d{2}
+```
 
 ### very nomagic : search as literal meaning
 
-```\V (uppercase) : all the characters has their literal meaning and must use \ for escape meanning.```
+```
+\V (uppercase) : all the characters has their literal meaning and must use \ for escape meanning.
+```
 
 
 ## Advance Subsitute
@@ -34,7 +40,9 @@ So using VERY MAGIC, it will be much more readable.
 
 The subsitute format is like:
 
-```:[range]s[ubstitute]/{pattern}/{replace-string}/{flags}```
+```
+:[range]s[ubstitute]/{pattern}/{replace-string}/{flags}
+```
 
 We can use following special characters in replace-string:
 * \r is newline, \n is a null byte (0x00).
@@ -48,7 +56,9 @@ Inorder to use **\1** to **\N**, we need use **()** in search field to set match
 
 Still using previous example,  to match "2016-06-01", the regular can be written as
 
-```\v(\d{4})-(\d{2})-(\d{2})```
+```bash
+\v(\d{4})-(\d{2})-(\d{2})
+```
 
 In this way, I can use \1 refer to 2016, \2 refer to 06 and \3 refer to 01.
 
@@ -57,18 +67,24 @@ In this way, I can use \1 refer to 2016, \2 refer to 06 and \3 refer to 01.
 
 I want to change the date to datetime format in xml for all 
 
-```<sch:sellThroughDate>2016-06-01</sch:sellThroughDate> ```
+```
+<sch:sellThroughDate>2016-06-01</sch:sellThroughDate> 
+```
 
 The command could be:
 
-```:%s/sellThroughDate>\v\d{4}-\d{2}-\d{2}/\0T00:00:00/g```
+```bash
+:%s/sellThroughDate>\v\d{4}-\d{2}-\d{2}/\0T00:00:00/g
+```
 
 
 ## Global Command
 
 The syntax is :
 
-```:[range]g/{pattern}/{cmd}```
+```
+:[range]g/{pattern}/{cmd}
+```
 
 Gloabal act Ex command on multiple lines, that means you can almost do anything beyond your imagination.
 
@@ -76,11 +92,15 @@ Gloabal act Ex command on multiple lines, that means you can almost do anything 
 
 The easiest one I were using is delete lines based on a pattern
 
-```:g/{pattern}/d```
+```
+:g/{pattern}/d
+```
 
 We can also delete all the lines unmatch with:
 
-```:v[group]/{pattern}/d```
+```
+:v[group]/{pattern}/d
+```
 
 ### Gloabal Sort
 This is a command to sort element inside CSS, like :
@@ -96,7 +116,9 @@ html{
 ```
 You can run as:
 
-```:g/{/ .+1,/}/-1 sort```
+```bash
+:g/{/ .+1,/}/-1 sort
+```
 
 
 
