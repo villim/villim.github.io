@@ -48,6 +48,7 @@ layout: post
 
 对于程序员来说，还值得坚守传说中的
 ### 优秀程序员的三大美德：
+
 * Laziness 懒惰
 * Impatience 急躁
 * Hubris 傲慢  
