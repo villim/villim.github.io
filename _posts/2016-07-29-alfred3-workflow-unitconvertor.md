@@ -12,6 +12,7 @@ When it comes to Numbers, we also see this different. "3/4" in Chinese, we say *
 
 Besides that, the most exotic Americans, even make the understanding worse. Everyone is using Kilemeters as unit, they prefer Miles. And when chating with them, it's always confused me with temperature, cause they are talking with Fahrenheit  -_-||
 
+
 ## Alfred3 
 
 Thinking about converting such kinds of things, Alfred is a great tool. It's direct, and quick!! Have been using it for quite a long time, this is a good chance to create a small tool by myself.
