@@ -10,7 +10,7 @@ Take how to describe Address for example. Chinese would start from the biggest t
 
 When it comes to Numbers, we also see this different. "3/4" in Chinese, we say **4分之3**, which means the denominator (4) first then numerator (3). But in English, we say **Three Quarters**, which is numerator (3) first.
 
-Besides that, the most exotic Americans, even make the understanding worse. Everyone is using Kilemeters as unit, they prefer Miles. And when chating with them, it's always confused me with temperature, cause they are talking with Fahrenheit  -_-||
+Besides that, the most exotic Americans, even make the understanding worse. Everyone is using Kilemeters as unit, they prefer Miles. And when chating with them, it's always confused me with temperature, cause they are talking with Fahrenheit -_-|| <br/>
 
 
 ## Alfred3 
@@ -27,7 +27,10 @@ I only added temperature converting between Fathenheit and Celsius. And between 
 
 To implement this requirement, just need 4 **Script Filter** and a very simple script. But it do cost me quite some time to make it clear how to generate result XML. 
 
-The source code is here [alfred3-workflow-unit-convertor](https://github.com/villim/alfred3-workflow-unit-convertor)
+
+## Source Code
+
+The source code is in Github [alfred3-workflow-unit-convertor](https://github.com/villim/alfred3-workflow-unit-convertor)
 
 
 
