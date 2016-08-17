@@ -7,11 +7,12 @@ layout: post
 
 处理一个客户提交的文件，类似这样的数据
 
-``` text
-﻿61121|A|BE060U5R|B|2016|DRAW_OTC|_NULL_|_NULL_|_NULL_|465|465|N|N|N|N|N|N|N|N|N|2016-3-24T00:00:00|PHILLIPSE
+```bash
+﻿61121|A|BE060U5R|B|2016|DRAW_OTC|_NULL_|_NULL_|_NULL_
+|465|465|N|N|N|N|N|N|N|N|N|2016-3-24T00:00:00|PHILLIPSE
 ```
 把它转化为Object总是出错，看了看数组 
-```Text
+```bash
 [﻿, 6, 1, 1, 2, 1, |, A, |, B, E, 0, 6, 0, U, 5, R, |, B, |, 2, 0, 1, 6, |, D, R, A, W, _, O, T, C, |, _, N, U, L, L, _, |, _, N, U, L, L, _, |, _, N, U, L, L, _, |, 4, 6, 5, |, 4, 6, 5, |, N, |, N, |, N, |, N, |, N, |, N, |, N, |, N, |, N, |, 2, 0, 1, 6, -, 3, -, 2, 4, T, 0, 0, :, 0, 0, :, 0, 0, |, P, H, I, L, L, I, P, S, E]
 ```
 看起来也是挺正常的，不过 debug 看起来，我读出的字符，和看到的一定不一样。
@@ -27,7 +28,7 @@ layout: post
 ```
 
 看不得人的家伙出现了：
- ``` Text
+ ```bash
 0000000: efbb bf36 3131 3231 7c41 7c42 4530 3630  ...61121|A|BE060
 0000010: 5535 527c 427c 3230 3136 7c44 5241 575f  U5R|B|2016|DRAW_
 0000020: 4f54 437c 5f4e 554c 4c5f 7c5f 4e55 4c4c  OTC|_NULL_|_NULL
@@ -39,12 +40,13 @@ layout: post
 ``` 
 显然 **36 3131 3231** 是 **61121**，那么这个 **efbb bf**是什么鬼？ 联想到客户是用的 Windows，想到这个东西：
 
-|Byte order mark |	Description | 
-|EF BB BF |	UTF-8 |
-|FF FE	| UTF-16, little endian |
-|FE FF	| UTF-16, big endian |
-|FF FE 00 00	| UTF-32, little endian |
-|00 00 FE FF	| UTF-32, big-endian |
+| Byte order mark |  Description   | 
+| :-------------  | :------------- |
+| EF BB BF |	UTF-8 |
+| FF FE	| UTF-16, little endian |
+| FE FF	| UTF-16, big endian |
+| FF FE 00 00	| UTF-32, little endian |
+| 00 00 FE FF	| UTF-32, big-endian |
 
 ## What is BOM
 
@@ -61,10 +63,10 @@ Always prefix a Unicode plain text file with a byte order mark, which informs an
 现在问题简单了，可以在程序里支持，或者去掉BOM就好。还是说 Vim 的方法。
 
 ```bash
-	:setlocal nobomb   // remove BOM characters
-	:w 
+:setlocal nobomb   // remove BOM characters
+:w 
 ```
 ```bash
-	:setlocal bomb?   // check if contains BOM
+:setlocal bomb?   // check if contains BOM
 ```
 
