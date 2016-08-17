@@ -3,15 +3,17 @@ title: Byte Order Mark
 layout: post
 ---
 
+被BOM闪了一下腰，小小的问题，还卡了我好一会儿。
+
 ## 幺蛾子
 
-处理一个客户提交的文件，类似这样的数据
+是这样，要处理一个客户提交的文件，类似这样的数据
 
 ```bash
 ﻿61121|A|BE060U5R|B|2016|DRAW_OTC|_NULL_|_NULL_|_NULL_
 |465|465|N|N|N|N|N|N|N|N|N|2016-3-24T00:00:00|PHILLIPSE
 ```
-把它转化为Object总是出错，看了看数组:
+把它转化为Object总是出错，检查了各种validation，实在看不出有什么问题，看了看数组里的信息，也是一切正常:
 
 ```bash
 
@@ -23,7 +25,7 @@ layout: post
  
 
 ```
-看起来也是挺正常的，不过 debug 看起来，我读出的字符，和看到的一定不一样。
+不过 debug 了几次，的确可以断定，程序读出的字符，和看到的一定不一样。
 
 
 ## Invisible Characters
