@@ -1,13 +1,14 @@
 <div id="prenext">
 	{% if page.previous %}
-	<i class="fa fa-arrow-circle-left"></i>
+	<i class="fa fa-caret-square-o-left"></i>
 	<a href="{{page.previous.url}}">{{page.previous.title}}</a>
 	{% endif %}
 	<span> &nbsp;&bull;&nbsp;&bull;&nbsp;&bull;&nbsp; </span>
 	{% if page.next %}
 	<a  href="{{page.next.url}}">{{page.next.title}}</a>
-	<i class="fa fa-arrow-circle-right"></i> 
+	<i class="fa fa-caret-square-o-right"></i> 
 	{% endif %}
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<i class="fa fa-hand-spock-o"></i> 
 	all posts in <a href="/archive.html">Archive</a>
 </div>
