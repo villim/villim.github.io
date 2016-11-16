@@ -9,7 +9,7 @@ layout: post
 
 看看这个 [不完全指南](http://www.auooo.com/2015/06/26/shadowsocks%EF%BC%88%E5%BD%B1%E6%A2%AD%EF%BC%89%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/) 就很清楚了。
 
-![Shawdowsocks Workflow](http://villim.github.io/img/2016/shadowsocks-first-experience-01.png =160)
+![Shawdowsocks Workflow](http://villim.github.io/img/2016/shadowsocks-first-experience-01.png)
 
 简单说一下，Shadowsocks是对SSH Tunnel的升级，把之前简单的端到端的协议拆分成了 ssh-client 和 ssh-server。因为和客户端通信的ssh-client在GFW之外，而ssh-server之间是加密通信，从而保证了消息里的特征码不能被GFW捕获，也就几乎不可能被封掉了。
 
