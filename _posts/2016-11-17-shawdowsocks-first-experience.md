@@ -1,5 +1,5 @@
 ---
-title: shadowsocks 初体验
+title: Shadowsocks 初体验
 layout: post
 ---
 
@@ -30,7 +30,7 @@ password: xxxx
 
 在Mac上我们可以使用 ShadowsocksX-NG ，配置相当简单，到 Servers - Active Shawdowsocks -> Server Preference 里添加即可使用。
 
-### Surge 
+### Surge App
 
 大受好评的 [Surge](http://nssurge.com/) 也可以做这个事情，据说 iOS 版本比 Mac 更好用，不过当然价格也是贵的不要不要的，iOS 要328¥，Single Mac License 还要 50$。当然人家是 Web Developer Tool and Proxy Utility，没人要你做这么简单的事情。可以试用30天，建议先尝试，仅针对姿势修正的功能来说，优点在于可以收工更准确配置Proxy策略，支持更多协议，如果有SSH Tunnel也可使用。我感觉还不错，只是价格太贵，以目前人气，估计短时间不会降价的。不过对折时一定要来一发。
 
@@ -81,12 +81,11 @@ alias pc='proxychains4'
 然后到iTerm里 **iTerm -> Preferences -> Profiles -> Keys** 
 ，新建一个快捷键:
 
-* 例如 ⌥+↩︎ ，
-* Action 选择 Send Hex Code，
-* 键值为 0x1 0x70 0x63 0x20 0xd，
-* 保存生效。
+* 例如 ⌥+↩︎ 
+* Action 选择 Send Hex Code
+* 键值为 0x1 0x70 0x63 0x20 0xd
 
-现在就可以像之前使用 Git 一样使用，只是，最后不能直接 ↩︎，而需要用 ⌥+↩︎ 。
+现在就可以像之前使用 Git 一样使用，只是，最后不能直接 ↩︎ 而需要用 ⌥+↩︎ 
 
 
 
