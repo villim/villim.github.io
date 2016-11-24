@@ -27,8 +27,6 @@ layout: post
 
 后面就是体力活，一步步优化了
 
-![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.4.JPG)
-
 ![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.5.PNG)
 
 最后上色
