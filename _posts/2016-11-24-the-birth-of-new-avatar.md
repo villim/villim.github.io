@@ -22,13 +22,17 @@ layout: post
 不过，三眼在欧美日本漫画里面到时时常出现的。最近《冰与火之歌》也有一个，三眼乌鸦。可以开启时间属性，穿梭前世今生未来，典型的宅男属性-_-|| 其实，能看穿虚妄这就足够好了。自觉就响起了《雾里看花》，“给我给我一‘只’慧眼吧，让我把这世界看个清清楚楚” ...
 
 于是尝试，加上眼睛尝试了一下，感觉挺不错的。
+
 ![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.3.JPG)
 
 后面就是体力活，一步步优化了
+
 ![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.4.JPG)
+
 ![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.5.PNG)
 
 最后上色
+
 ![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.6.PNG)
 
 总的来说我还是挺满意这个头像的，真要是能看穿虚妄，Cool！
