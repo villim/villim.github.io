@@ -1,0 +1,36 @@
+---
+title: The Birth of new Avatar
+layout: post
+---
+
+最早手绘的这个Avatar应该是2005年，是给OICQ准备的，记得最开始OICQ默认的头像都是美国动画的角色，我用的是辛普森头像，后来因为版权问题，腾讯开始使用自己画的让人丑得哭头像，于是决定自己模仿辛普森画一个。当时设计了一个完整的签名，头像只是其中一部分。在电脑上，没有绘图板的情况下，用鼠标几乎算是一个一个像素给画出来的，大概花了整整一个下午。用了这么多年后，随着头像图片可以越来越大，越来越清晰，现在终于自己都看不下去了。
+
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.1.JPG)
+
+最开始是想在目前基础上，简单升级一下。那天刚好在Apple Store附近，用 iPad Pro 画了个草图。iPad Pro 真是个好东西！口水啊。
+
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.2.PNG)
+
+不过感觉缺了些什么，没有内涵 ...
+
+后来在看希腊神话的时候，看到很有趣的巨人一族。什么百臂巨人，人马，蛇身，牛头怪，鹰翅，还有拉风的百眼和独眼巨人。可他们没有三眼！
+
+回想一下，在亚洲文化里，三眼倒是有那么几个。比如藏传佛教里的吉祥天母，还有我们熟悉的二郎神杨戬，昭惠显圣二郎真君，第三眼可分辨一切鬼怪，算是X光透视。印度教里的，湿婆神就更牛X了，毁灭之神，第三眼可发出毁灭宇宙间一切的神火。
+
+似乎是欧洲把神和怪物区分的很严格，神还是人形的，身体构造和我们并无二异，当然具有神力。而我们的古人还尝试给人添加一些属性，强化为神。用现在的话来说，我们是 VR 和 AR 并重的。
+
+不过，三眼在欧美日本漫画里面到时时常出现的。最近《冰与火之歌》也有一个，三眼乌鸦。可以开启时间属性，穿梭前世今生未来，典型的宅男属性-_-|| 其实，能看穿虚妄这就足够好了。自觉就响起了《雾里看花》，“给我给我一‘只’慧眼吧，让我把这世界看个清清楚楚” ...
+
+于是尝试，加上眼睛尝试了一下，感觉挺不错的。
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.3.JPG)
+
+后面就是体力活，一步步优化了
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.4.JPG)
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.5.PNG)
+
+最后上色
+![Old Avatar](http://villim.github.io/img/2016/the.birth.of.new.avatar.6.PNG)
+
+总的来说我还是挺满意这个头像的，真要是能看穿虚妄，Cool！
+
+
