@@ -47,4 +47,3 @@ layout: post
 
 * [《万维刚:万万没想到》](https://book.douban.com/subject/25986341/)
 * [知乎：如何成为一个能独立思考的人？](https://www.zhihu.com/question/20527159)
-* [Emily Dickinson - 如果记住就是忘却 《给孩子的诗》](https://book.douban.com/subject/25913612/)
