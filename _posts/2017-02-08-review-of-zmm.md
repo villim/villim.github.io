@@ -108,7 +108,7 @@ Inner Peace，说得都已经有些成词滥调了，不过它绝不是从事技
 回过头来，突然觉得，其实王阳明的心学，也有几分类似，比如看看心学这四句 “无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。” 活脱就是 Qulity 的一个子集。
 
 
-P.S.
+## P.S.
 
 ZMM = Zen and the Art of Motocycle Maintenance
 
