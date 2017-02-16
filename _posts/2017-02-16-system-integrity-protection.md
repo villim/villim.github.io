@@ -42,5 +42,5 @@ To enable or disable System Integrity Protection, you must boot to Recovery OS a
 
 1. Boot to Recovery OS by restarting your machine and holding down the Command and R keys at startup.
 2. Launch Terminal from the Utilities menu.
-3. Enter the following command:$ csrutil enable 
+3. Enter the following command: **$ csrutil enable** 
 After enabling or disabling System Integrity Protection on a machine, a reboot is required.
