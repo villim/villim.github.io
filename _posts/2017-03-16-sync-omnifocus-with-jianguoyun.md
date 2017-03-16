@@ -7,11 +7,11 @@ OmniFocus is wounderful, but **Omni Sync Server** not ... many THANKS to THE GRE
 
 Lucky, OmniFocus support **WebDAV**, so we can choose a faster network cloud disk solution, like Box, Dropbox, Google Drive ...
 
-But native privider will be better, as we know most of cloud disk providers have shut down their products ... many THANKS to WHOEVER! [Jianguoyun](https://www.jianguoyun.com/) I have been using for a while, it's really fast, although free space is quite small, but enough to sync Apps data.
+But native privider will be better, as we know most of cloud disk providers have shut down their products ... many THANKS to WHOEVER! However, There's still a recommended one, [Jianguoyun](https://www.jianguoyun.com/). I have been using for a while, it's really fast, although free space is quite small, but enough to sync Apps data.
 
 ## What is WebDAV
 
-[WebDAV](https://en.wikipedia.org/wiki/WebDAV)) is short for **Web Distributed Authoring and Versioning**. It is an extension of the Hypertext Transfer Protocol (HTTP) that allows clients to perform remote Web content authoring operations.
+[WebDAV](https://en.wikipedia.org/wiki/WebDAV) is short for **Web Distributed Authoring and Versioning**. It is an extension of the Hypertext Transfer Protocol (HTTP) that allows clients to perform remote Web content authoring operations.
 
 Why we need WebDAV? 
 
