@@ -86,7 +86,7 @@ layout: post
 
 ## 同庆考场图
 
-![Driving Learning Subject3](http://villim.github.io/img/driving-learning-3.JPG)
+![Driving Learning Subject3](http://villim.github.io/img/2017/driving-learning-3.JPG)
 
 
 ## 考试技巧
