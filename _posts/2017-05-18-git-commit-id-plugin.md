@@ -109,3 +109,15 @@ For example, we can append {git.commit.id.abbrev} to file name when repackaging.
 </plugin>
 
 ```
+
+And as we have git.propeties in classpath, you can also read it in code.
+
+```java
+@PropertySource({ "classpath:git.properties" })
+
+...
+
+System.out.println(env.getProperty("git.build.version"));
+System.out.println(env.getProperty("git.commit.id"));
+        
+```
