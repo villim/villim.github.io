@@ -11,7 +11,7 @@ This plugin makes basic repository information available through maven resources
 
 How to use it?
 
-## git-commit-id-plugin
+## git-commit-id-plugin conf example
 
 ```
 <plugin>
@@ -49,7 +49,7 @@ How to use it?
 
 ```
 
-## git.properties
+## git.properties example
 
 In previous configuration, we can see it will save reversion infos into a git.properties file.
 
