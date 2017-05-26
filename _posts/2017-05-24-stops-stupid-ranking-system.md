@@ -9,7 +9,11 @@ It is always a difficult job when I need assess teammember's annual work perfoma
 
 In order to make it at least a little meaningful, my solution was never compair between members, just compair to each one's own resolution and goal. Howerver, to make this judgement reliable, there's tremendous work everyweek, I need to document and review everyone's work regularly. But even the judgement is convincing, we still can't announce everyone is beyond expectation! Cause quota is limitted, we have only 1 or 2 places.
 
+![dilbert-performance-review](http://villim.github.io/img/2017/dilbert-performance-review.gif)
+
 In this artical [UNJUST DESERTS](http://www.poppendieck.com/pdfs/Compensation.pdf), The author Karl Wiegers's idea is get rid of this stupid ranking system. 
+
+
 
 ## Individual Success??
 
