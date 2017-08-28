@@ -23,6 +23,6 @@ There's still a man standing in my Futune, a Goal in my mind, and that guy is to
 **The wretch, concentred all in self,**<br>
 **Living, shall forfeit fair renown,**<br>
 **And, doubly dying, shall go down** <br>
-**To the vile dust, from whence he sprung,**<br>
-**Unwept, unhonor’d, and unsung. ** 」
+**To the vile dust, from whence he sprung,** <br>
+**Unwept, unhonor’d, and unsung.** 」
 
