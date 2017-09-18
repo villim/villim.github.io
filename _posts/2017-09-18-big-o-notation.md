@@ -20,11 +20,11 @@ Here's 5 most common algorithm that listing as order from fast to slow :
 
 ![diagram for 5 common algorithm](http://villim.github.io/img/2017/big-o-notation-5-common-algorithm.jpg)
 
-1. O(log n) Logarithmic time, such as binary search
-2. O(n) Linear time, such as simple search
-3. O(n * log n) such as Quick Sort
-4. O(n2) such as Select sort
-5. O(n!) such as Traveller problem
+1. **O(log n)** Logarithmic time, such as binary search
+2. **O(n)** Linear time, such as simple search
+3. **O(n * log n)** such as Quick Sort
+4. **O(n2)** such as Select sort
+5. **O(n!)** such as Traveller problem
 
 
 
