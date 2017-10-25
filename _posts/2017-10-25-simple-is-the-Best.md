@@ -18,7 +18,7 @@ Alan还提到了个有趣的例子，当电话的原型在1926年由AT&T发明�
 
 ## 效率工具
 
-![Einstein](https://cn.bing.com/images/search?view=detailV2&ccid=dpaGScNH&id=B4900077A59F77427FCD78137D38C63EA2FE5B58&thid=OIP.dpaGScNHAskpUMbGuSlrtQEsCN&q=We+can%E2%80%99t+solve+problems+by+using+the+same+kind+of+thinking+we+used+when+we+created+them.&simid=608021861770199865&selectedIndex=3&ajaxhist=0)
+![Einstein](http://izquotes.com/quotes-pictures/quote-we-can-t-solve-problems-by-using-the-same-kind-of-thinking-we-used-when-we-created-them-albert-einstein-56471.jpg)
 
 爱因斯坦说过一句话 ：We can't solve problems by using the same kind of thinking we used when we created them.
 
