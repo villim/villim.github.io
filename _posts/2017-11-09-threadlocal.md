@@ -72,13 +72,13 @@ private static int nextHashCode() {
 
 ## What's the Problem ?
 
-1. 数据丢失
+### Problem 1: 数据丢失
 
 最常碰到的问题，就是放到ThreadLocal里面的东西找不到了...比如以前把用户登陆信息session，放到ThreadLocal里面，用来判断用户是否登陆。可用户在使用过程中，突然提示未登录。
 
 这里是在配合ThreadPool的使用的时候，出现了问题。现在的Application Sever，比如Jetty、Tomcat，都是使用ThreadPool的。它们不能保证，永远都使用同一个线程服务。于是这里要解决的问题，发生了变化，变成了一个用户，多个线程的问题，可以考虑使用外部存储，在多个线程之间来获得一致的数据。
 
-2. 内存溢出
+### Problem 2: 内存溢出
 
 还有一个尝尝被忽略的问题，我们不断地往ThreadLocalMap里面塞东西，塞进去的又都是强引用，如果Thread不被销毁，Map里面的东西也无法被回收，会占用非常大的空间, 可能最终导致内存溢出。
 
