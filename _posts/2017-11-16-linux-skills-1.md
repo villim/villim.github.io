@@ -1,5 +1,5 @@
 ---
-title: Linux Tricks (1)
+title: Linux Skills (1)
 layout: post
 ---
 
