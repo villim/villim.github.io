@@ -24,7 +24,7 @@ While Unchecked Exception from From the perspective of code, it's very very clea
 
 To think this problem in semantic way, we may get a better understanding.
 
-* Our code have two kinds of Errors, **Programming Error** and **Logic Error**. NullPointerException is the most typical Programming Error, it should happened at all if we are careful enough.  While Logic Error is the errors that constrainted with our business logic rules. ***Hardcore Java*** suggested:
+Our code have two kinds of Errors, **Programming Error** and **Logic Error**. NullPointerException is the most typical Programming Error, it should happened at all if we are careful enough.  While Logic Error is the errors that constrainted with our business logic rules. ***Hardcore Java*** suggested:
 
 * If an exception is always the result of a programming error, make it a direct descendant of RuntimeException.
 * If an exception represents a user's failure to enter data properly, you may be able to get away with using RuntimeException. This will allow you to propagate the RuntimeException in business logic classes without having to declare it. However, the GUI or other interface to the program should always watch for these kinds of errors. 
