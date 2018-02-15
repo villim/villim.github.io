@@ -99,3 +99,44 @@ CGO_LDFLAGS="-g -O2"
 PKG_CONFIG="pkg-config"
 ```
 
+## 3. Eclipse Configuration
+
+As a Java developer, I'm used to Eclipse and I'm glad there is also a Golang plugin for Eclipse.
+
+### 3.1 Install GoEclipse 
+
+```
+Open Eclipse -> Help -> Eclipse MarketPlace -> Find 'GoEclipse' -> Install
+```
+### 3.2 Try Hello World
+
+Now we can create **GO PROJECT** in **Project Explorer**
+
+And next, let's create a **Go File** like following content:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+   fmt.Println("Hello, World!")
+}
+```
+When we **RUN** it, there probably a Error :
+
+#### Error: GOROOT is not defined
+
+This mean you need specify Go installation path.
+
+```
+Eclipse -> Preference -> Go -> Go installation Directory
+```
+
+#### Error: Resource doesn't have a corresponding Go package
+
+After configure Go installation directory, I encounter another Error : Resource doesn't have a corresponding Go package
+
+This error required you **create a sub folder under {Golang Project}/src/** , and then put the test GO File into new sub folder.
+
+Now, it's able to pring "hello, world!" as expectec. Hooray !!
