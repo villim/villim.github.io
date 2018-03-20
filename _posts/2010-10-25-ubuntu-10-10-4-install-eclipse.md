@@ -15,7 +15,7 @@ tags:
 相对来说记录一下 **Eclipse 常用插件** 反而有意义一些：
 
 1. Findbugs - http://findbugs.cs.umd.edu/eclipse/
-2. PMD - http://pmd.sourceforge.net/eclipse/
+2. PMD for Eclipse4 - https://dl.bintray.com/pmd/pmd-eclipse-plugin/updates/
 3. Subclipse - http://subclipse.tigris.org/update_1.6.x
 4. Eclipse Notepad - http://eclipsenotepad.sourceforge.net/updates/
 5. EclEmma - http://update.eclemma.org/
