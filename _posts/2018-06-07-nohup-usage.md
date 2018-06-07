@@ -79,10 +79,10 @@ Now there's no **nohup.out** file anymore, all the logs goes to **test.log** fil
 ```
 
 
-**/dev/null** is a emply black hole, anything throw into it will just dispear.
-**1>logfile** means print STDOUT to logfile
-**2>logfile** means print STDERR to logfile
-**2>&1** means redirect STDERR to STDOUT, we cant use **1>logfile 2>logfile**, cause that will logfile be opened twice, and STDOUT and STDERR will compete to write.
+* **/dev/null** is a emply black hole, anything throw into it will just dispear.
+* **1>logfile** means print STDOUT to logfile
+* **2>logfile** means print STDERR to logfile
+* **2>&1** means redirect STDERR to STDOUT, we cant use **1>logfile 2>logfile**, cause that will logfile be opened twice, and STDOUT and STDERR will compete to write.
 
 
 
