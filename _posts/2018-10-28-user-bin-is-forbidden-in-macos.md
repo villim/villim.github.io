@@ -21,8 +21,8 @@ However, when I want to use it in Eclipse for building RPM packages, it failed w
 ok, it means can not find RPM, let's link to /usr/bin/ 
 
 ```bash
-# sudo sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpm /usr/bin/rpm
-# sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpmbuild /usr/bin/rpmbuild
+$ sudo sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpm /usr/bin/rpm
+$ sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpmbuild /usr/bin/rpmbuild
 ```
 
 Strangly, it failed again with error:
@@ -41,18 +41,18 @@ Simple explanation is, from OS X, MacOS have a new security protection. It write
 
 To disable it, we have to use a tool named: **csrutil**
 
-1. Boot to Recovery OS by restarting your machine and holding down the **Command + R** keys at startup.
-2. Launch Terminal from the Utilities menu.
-3. You can check current status with
+(1) Boot to Recovery OS by restarting your machine and holding down the **Command + R** keys at startup.
+(2) Launch Terminal from the Utilities menu.
+(3) You can check current status with
 
 ```bash
 $ csrutil status
 System Integrity Protection status: enabled.
 ```
-4. Disable with
+(4) Disable with
 
 ```
 csrutil disable
 ```
 
-5. Reboot is required
+(5) Reboot is required
