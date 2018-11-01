@@ -58,3 +58,6 @@ csrutil disable
 ```
 
 (5) Reboot is required
+
+
+![macos-disable-system-integrity-protection.jpg](http://villim.github.io/img/2018/macos-disable-system-integrity-protection.jpg)
