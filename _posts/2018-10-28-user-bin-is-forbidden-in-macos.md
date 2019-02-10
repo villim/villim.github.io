@@ -21,7 +21,7 @@ However, when I want to use it in Eclipse for building RPM packages, it failed w
 ok, it means can not find RPM, let's link to /usr/bin/ 
 
 ```bash
-$ sudo sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpm /usr/bin/rpm
+$ sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpm /usr/bin/rpm
 $ sudo ln -sf /usr/local/Cellar/rpm/4.14.1_1/bin/rpmbuild /usr/bin/rpmbuild
 ```
 
