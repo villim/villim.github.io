@@ -47,7 +47,10 @@ git merge --abort
 git reset --hard HEAD
 git reset --hard [hash_commit_id]
 git reset HEAD~2 git_managed_file.txt
+git reset --hard HEAD^ // Undo last and remove changes
 ```
+
+
 
 ### 3.2 Revert
 
