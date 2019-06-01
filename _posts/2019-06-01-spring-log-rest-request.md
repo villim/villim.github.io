@@ -1,6 +1,6 @@
 ---
 title: Log REST Request in SpringBoot2
-layout: blog
+layout: post
 ---
 
 When building REST APIs, if we are able to see incoming request, the raw headers and payload info will help to solve integration testing. 
