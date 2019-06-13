@@ -5,7 +5,7 @@ layout: post
 
 My current MacOS version is Mojave. And Using Oracle version 12.
 
-Caused our DBA don't use any Oracle Client Tools. In order to make sure every SQL file we dilivered is able to run with SQLPlus, we have to test with it.
+Caused our DBA don't use any Oracle Client Tools. In order to make sure every SQL file we delivered is able to run with SQLPlus, we have to test with it.
 
 ## (1) Software Download
 
