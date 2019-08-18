@@ -13,9 +13,9 @@ Let's install **VirtualBox** first, [download here](https://www.virtualbox.org/w
 
 ## What is Vagrant
 
-![Vagrant](http://villim.github.io/img/2019/vagrant.png)
-
 However, **VirtualBox** is really ... difficult to use, not friendly enbough. The good new is we have a wounderful tool which named [Vagrant](https://www.vagrantup.com/).
+
+![Vagrant](http://villim.github.io/img/2019/vagrant.png)
 
 **Vagrant** provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.
 
