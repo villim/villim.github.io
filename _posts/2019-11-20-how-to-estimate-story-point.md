@@ -1,5 +1,5 @@
 ---
-title: Agile : How to Estimate Story Point 
+title: Agile - How to Estimate Story Point 
 layout: post
 ---
 
