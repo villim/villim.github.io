@@ -159,3 +159,23 @@ $ source /etc/profile.d/maven.sh
 ```
 
 
+## Appendixs: Install Gradle on CentOS
+
+Download gradle from [Gradle Official Site](https://gradle.org/releases/)
+
+
+First, unzip files:
+
+```
+$ mkdir /opt/gradle
+$ unzip -d /opt/gradle gradle-5.6.4.zip
+```
+
+Then change PATH with the unzip folder:
+```
+$ vim .bash_profile
+# with PATH=$PATH:/opt/gradle/gradle-5.6.4/bin
+$ source .bash_profile
+```
+
+
