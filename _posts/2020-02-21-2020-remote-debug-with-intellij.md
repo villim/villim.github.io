@@ -23,7 +23,7 @@ agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8001
 ```
 Port number should be the same as we specified at remote side.
 
-![Remote Debug with Intellij](http://villim.github.io/img/2020/remote-debug-with-intellij.png =600x)
+![Remote Debug with Intellij](http://villim.github.io/img/2020/remote-debug-with-intellij.png)
 
 
 
