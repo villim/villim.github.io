@@ -5,14 +5,14 @@ layout: post
 
 MacOS is Great for many things, such as **Time Machine**. But unluky, it's not always reliable. 
 
-I only have one SSD for recovery, and the most trustless thing is I never tested the backup. And it's impossible to test for every week's backup ... -_-|| so when the backup file damaged ... The only way is reinstall from scratch.
+I only have one SSD for recovery, and the most trustless thing is I never tested the backup. And it's impossible to test for every week's backup  -_- so when the backup file damaged ... The only way is reinstall from scratch.
 
 
 ## Recovery MacOS
 
 Apple provide document: [About macOS Recovery](https://support.apple.com/en-us/HT201314), [Chinesse](https://support.apple.com/zh-cn/HT204904)
 
-![macos-recovery-mode-reinstall](macos-recovery-mode-reinstall.jpg)
+![macos-recovery-mode-reinstall](http://villim.github.io/img/2020/macos-recovery-mode-reinstall.jpg)
 
 * Press following Keys, after restarted system and after saw Apple icon release
 * Command (⌘)-R : reinstall the version was on your Mac ( Recommend )
