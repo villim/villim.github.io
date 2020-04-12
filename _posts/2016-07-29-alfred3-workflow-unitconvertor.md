@@ -32,6 +32,9 @@ To implement this requirement, just need 4 **Script Filter** and a very simple s
 
 The source code is in Github [alfred3-workflow-unit-convertor](https://github.com/villim/alfred3-workflow-unit-convertor)
 
+P.S.
+Another workflow for [Rename Ebook](http://villim.github.io/alfred-workflow-rename-ebook)
+
 
 
 
