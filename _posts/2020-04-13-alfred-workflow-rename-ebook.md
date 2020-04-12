@@ -18,12 +18,17 @@ layout: post
 
 ![Rename Ebook Alfred Workflow](http://villim.github.io/img/2020/rename-ebook-workflow.png)
 
-花了一天时间来学了学 AppleScript，真心喜欢不起来 ... 故意要把语言变得「很自然」似的，却反而相当不利于编程时有结构性的理解。就像是学第三外语，明明知道干干嘛，可就是语法老是犯错误。Apple Script 本来做的事情并不复杂，也是「胶水」程序，可也不可能让普通零基础用户使用，真不明白干嘛要这么设计。不过现在已经直接支持 JavaScript 了，应该是明白以前太理想主义了。
+花了一天时间来学了学 AppleScript，真心喜欢不起来 ... 故意要把语言变得「很自然」似的，却反而相当不利于编程时有结构性的理解。就好像是在学第三门外语，明明知道该干嘛，可就是语法老是犯错误，与人对话，人家还能猜，电脑可没那么聪明，一直报错。AppleScript 虽然想做的事情并不复杂，也算是「胶水」程序，可也并不能让普通零基础用户使用，看看它的[历史](https://en.wikipedia.org/wiki/AppleScript)，毫无疑问，肯定是乔大爷的思考模式，导致这么设计语法。对程序员不友好，不过现在已经直接支持 JavaScript 了，想来是悔改了。
 
-因此，写起来真不是有趣的事情，最后拼凑了个能用的东西
+In a word，写起来真不是有趣的事情，还好最后拼凑了个能用的东西
 
 ![Rename Ebook with Alfred](http://villim.github.io/img/2020/rename-ebook-demo.png)
 
+```
+[Learn.AppleScript][9781430223610][2010][EN].pdf
+```
+
+虽然感觉 Apple Script 不是我的菜，可不知道怎么，总有还会捡起来的感觉，毕竟是 Apple 亲儿子 ... 系统集成什么，肯定不弱啊
 
 P.S.
 
