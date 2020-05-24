@@ -123,7 +123,7 @@ Sean 五岁开始，对数字变愈发敏感起来，于是开始在日常中给
 
 ## 参考
 
-[培养孩子的理系脑](https://book.douban.com/subject/34928068/)
-[妈妈教的数学](https://book.douban.com/subject/26922761/)
-[爸爸教的数学](https://book.douban.com/subject/27055700/)
-[爸爸教的数学 : 35个经典的数学原理](https://book.douban.com/subject/26899466/)
+* [『培养孩子的理系脑』](https://book.douban.com/subject/34928068/)
+* [『妈妈教的数学』](https://book.douban.com/subject/26922761/)
+* [『爸爸教的数学』](https://book.douban.com/subject/27055700/)
+* [『爸爸教的数学 : 35个经典的数学原理』](https://book.douban.com/subject/26899466/)
