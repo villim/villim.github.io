@@ -19,6 +19,9 @@ Apple provide document: [About macOS Recovery](https://support.apple.com/en-us/H
 * Option-⌘-R : upgrade to the latest version compatible with your Mac
 * Shift-Option-⌘-R : install pre-loaded version or still provided close version
 
+## Disable System Integrity Protection
+
+[Disable system integrity protection](http://villim.github.io/user-bin-is-forbidden-in-macos)
 
 ## Alfred
 
