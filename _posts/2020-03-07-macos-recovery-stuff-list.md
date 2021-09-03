@@ -34,6 +34,8 @@ Probably the best Mac Power User Tool
 
 https://brew.sh 
 
+``` brew install exiftool htop  youtube-dl openjdk zsh tig rpm nmap wget unrar aria2 tree ```
+
 ## iTerm & ZSH
 
 [ZSH Configuration](http://villim.github.io/replace-bash-with-zsh) 
