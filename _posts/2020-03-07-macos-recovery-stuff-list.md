@@ -143,6 +143,7 @@ sudo xcode-select -switch /
 * [LyricsX](https://github.com/ddddxxx/LyricsX/releases) ( iTunes Music Lyrics )
 * [Microsoft Teams](https://teams.microsoft.com/edustart) ( Communication Tool )
 * [Maipo](http://weiboformac.sinaapp.com) ( Weibo MacOS Client )
+* [MetaZ](https://metaz.io) ( mp4 meta-data editor )
 * [OmniFocus](https://www.omnigroup.com/omnifocus) ( Todo Tool )
 * [Skeype](https://www.skype.com/en/) ( Communication Tool )
 * [The Unarchiver](https://macpaw.com/the-unarchiver) ( Compress Tool )
