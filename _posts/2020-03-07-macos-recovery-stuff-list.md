@@ -131,6 +131,7 @@ sudo xcode-select -switch /
 ### System Tools
 
 * [1Password 6](https://1password.com/zh-cn/) ( Password Management Tool )
+* [Shadowsocks](https://github.com/shadowsocks) ( Network )
 * [Alfred](https://www.alfredapp.com) ( Productive Tool )
 * [Avira Security](https://www.avira.com)  ( Anti-Virus )
 * Amphetamine ( keeping screen alive ) 
