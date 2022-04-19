@@ -1,5 +1,3 @@
-
-
 ---
 title: 如何习得第二、第三 ... 门外语
 layout: post
@@ -7,7 +5,7 @@ layout: post
 
 近日学日语觉得有「卡壳」，看到《[如何科学学外语](https://book.douban.com/subject/35424870/)》这本书，正好重理理思路。看完又想起来一个老早的 TED 演讲，《[Anyone can learn a second language in 6 months](https://www.youtube.com/watch?v=d0yGdNEWdn0)》，两份资料相互印证，于是试着整理一个可执行的文档，方便回溯。另一方面外语的学习和编程语言的学习也有共通之处，完全可以借鉴。
 
-![The Big Question](http://villim.github.io/img/2020/learn.2nd.language.png)
+![The Big Question](http://villim.github.io/img/2022/learn.2nd.language.png)
 
 ## 外语学习的迷思
 
