@@ -11,7 +11,9 @@ You have to fill in VPN URL, then provide username, password, second username an
 
 However, after switching to AWS, VPN connecting becoming a nightmare ! Frist, not only one VPN anymore, and then these different VPNs can access to different resources ... When you have to switch frequently between them ... Ahhhhhh 
 
-Must have to find a way to reduce the pain. Thanks for all the colleagues's amazing help. ( I'm working on MacOS )
+Must find a way to reduce the pain, Lucky not only I'm thinking in this way. Thanks for all the colleagues's amazing help. 
+
+BTW,  I'm working on MacOS.
 
 ## Idea one: Cisco AnyConnect Profile
 
@@ -33,7 +35,6 @@ First of first, learned from @Neil, we can create a Profile to fix the configura
 </AnyConnectProfile>
 ```
 Now you dont need fill in VPN URL anymore, life is easier, but how about those username and password ?
-
 
 ## Idea Two: OpenConnect Solution
 
@@ -78,7 +79,9 @@ sudo openconnect --non-inter --authgroup=Corporate --form-entry=main:username="$
 --form-entry=main:secondary_username="$USERNAME" --form-entry=main:secondary_password="$PIN$(stoken)" "$VPN_SERVER"
 ```
 
-The problem with this solution is, OpenConnect will continue retrying when connection failed. And our VPN Token server will lock user after failed a few times.  But this is probably a good solution when we need working on Linux servers.
+It's albe to auto connect now !! But there is a problem, OpenConnect will continue retrying when connection failed. Unfortunately, our VPN Token server will lock user after failed a few times.  
+
+But this is probably a good solution when we need working on Linux servers.
 
 
 ## Idea Three: AnyConnect CLI Solution
