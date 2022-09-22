@@ -27,7 +27,7 @@ Termius 试用了一下，功能强大，设计也美观简单。不过类似 [B
 
 ## 3. iTerm2
 
-不想委屈美感，又得省钱，也没有其他出路了，只能继续配置 iTerm2 了。有钱到此止步。
+不想委屈美感，又得省钱，也没有其他出路了，只能继续配置 iTerm2 了。有钱的话到此止步啦 :p
 
 ### 3.1 keep SSH Session Alive
 
@@ -47,7 +47,7 @@ Host *
 
 ### 3.2 Configure Bastion Server
 
-首先把 Bastion 和 Object 服务器的信息保存到 SSH Config 文件里面。
+现在把 Bastion 和 Object 服务器的信息保存到 SSH Config 文件里面。
 
 ```bash
 ➜  ~ cat ~/.ssh/config
@@ -70,7 +70,7 @@ Host object-server-alias
 
 ### 3.3 Configure  Passphrase-less SSH key 
 
-目前我使用的 Jump Server 无法保留SSH 配置，导致必须使用密码，但是如果可以自己控制，可以配置 RSA Key，跳过密码输入。
+目前我使用的 Jump Server 无法保留SSH 配置，导致必须使用密码，但是如果有足够权限控制 Bastion Server，那么可以配置 RSA Key，跳过密码输入。
 
 运行下面的脚本，自动生成 Key 并配置到服务器。
 
@@ -96,7 +96,7 @@ cat ~/.ssh/id_rsa.pub | ssh $host 'cat >> ~/.ssh/authorized_keys'
 ssh $host 'chmod g-w,o-w ~; chmod 700 ~/.ssh; chmod 600 ~/.ssh/authorized_keys'
 ```
 
-如果不需要去服务器配置任何权限，只是需要自己动手生成 key 的话：
+如果不需要去 Bastion Server 配置任何 SSH 相关权限，只是需要自己动手生成 key 的话，直接生成 Key 就好了：
 
 ```bash
 $ ssh-keygen -t rsa -b 2048
@@ -115,15 +115,15 @@ Your public key has been saved in /home/username/.ssh/id_rsa.pub.
 ```bash
 ssh object-server-alias
 ```
-简单多了，比起直接使用 GUI 要稍微过过脑子，需要记一下服务器的名字，但是能统一所有操作到 iTerm 里面还是非常棒的感觉。对我我的情况，还是需要输入密码，公司的硬限制，稍微有些美中不足。
+简单多了，不过比起直接使用 GUI 来说，还是要稍微过过脑子，需要记一下服务器的别名。但是能统一所有操作到 iTerm 里面还是非常棒的体验。
 
-现在的问题是，有这么多机器，同时访问的机器很多的时候，就有点麻烦了 ... 还好我们还有其他工具，比如 Tmux。
+对我我的情况，由于权限限制还是需要输入密码。最后还有一个问题是，毕竟有这么多机器，也会出现同时访问多台机器的时候，要保持每台的连结又能快速切换，还要避免开大量窗口 ....  还好我们还有其他工具，比如 Tmux。
 
 ## 4. Tmux
 
 The [tmux](https://github.com/tmux/tmux/wiki) command is a [terminal multiplexer](https://www.wikiwand.com/en/Terminal_multiplexer).
 
-As we may access to quite a lot of Servers, using Tmux will make it better managed.
+简单说，Tmux 可以作为多窗口管理的工具，更重要的是提供了连接的 Session 管理，让你可以 detach 操作。使用起来也不是太复杂，基本操作如下。
 
 ### Usages Cheat sheet
 
@@ -164,7 +164,7 @@ tmux ls # show current sessions
 tmux attach -t 0 # attach “0”which is the first part of your tmux ls output 
 ```
 
-Read more:
+Reference Docs:
 
 * [Setting Up an SSH Bastion Host](https://goteleport.com/blog/ssh-bastion-host/)
 * [SSH to remote hosts through a proxy or bastion with ProxyJump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
