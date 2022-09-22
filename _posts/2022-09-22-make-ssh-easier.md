@@ -20,7 +20,7 @@ Termius 试用了一下，功能强大，设计也美观简单。不过类似 [B
 
 [Royal TSX](https://www.royalapps.com/ts/mac/features) 也是一款强大的集成客户端，和 Terminus 差不多，[也能很好的支持 Bastion](https://sabor413blog.wordpress.com/2019/10/04/using-royal-ts-to-connect-to-a-bastion-server-and-tunnel-into-other-systems/)。
 
-![Termius](http://villim.github.io/img/2022/ssh-royaltsx.png)
+![Royal TSX](http://villim.github.io/img/2022/ssh-royaltsx.png)
 
 [比较起来这两款的话](https://www.saashub.com/compare-royal-ts-vs-termius)，都满足我 SSH Clients 的需要，Royal 价格也在可以接受的范围，40$ 一次购买。不过 UI 设计真是喜欢不起来 QwQ
 
@@ -122,6 +122,8 @@ ssh object-server-alias
 ## 4. Tmux
 
 The [tmux](https://github.com/tmux/tmux/wiki) command is a [terminal multiplexer](https://www.wikiwand.com/en/Terminal_multiplexer).
+
+![Tmux](http://villim.github.io/img/2022/ssh-tmux.png)
 
 简单说，Tmux 可以作为多窗口管理的工具，更重要的是提供了连接的 Session 管理，让你可以 detach 操作。使用起来也不是太复杂，基本操作如下。
 
