@@ -1,241 +1,141 @@
 ---
-title: JDK 11 New Changes
 layout: post
+title: Vim Tips
 ---
 
-After switching projects from JDK 8 to Amazon Corretto 11 (JDK11). It's time to start using new features.
-
-JDK 11 contains quite alot of changes, here just listing some main of coding aspect.
+This is a memory notes, will be continuous updating ...
 
 
-![jdk 8 to 11](http://villim.github.io/img/2023/java-8-11.png)
+## 1. Use Registers
 
-## 1. Jshell
+Unlike a single clipboard for Operating System. Vim provide multiple **Registers** for delete, yank and put commands.
 
-Java REPL application name is jshell. JShell stands for Java Shell. jshell is an interactive tool to execute and evaluate java simple programs like variable declarations, statements, expressions, simple Programs etc. 
+Registers are named with character, name can be **0-1** or **a-z**. And we can use OS System Register, 「 + 」 for Linux and MacOS, 「 * 」 for windows.
 
-```bash
-➜  ~ jshell
-|  Welcome to JShell -- Version 11.0.15
-|  For an introduction type: /help intro
+### 1.1 Normal Register
 
-jshell> int a = 10
-a ==> 10
-
-jshell> int b = 20
-b ==> 20
-
-jshell> System.out.println("a+b=" + (a+b))
-a+b=30
 ```
-  
-        
-## 2. Improved String
+"ayy ( copy current line into register a )
+"Ayy ( append to register a by using capital letter ) 
+"ay3y ( yank 3 lines to register a )
+v"ay ( v: enter visual mode and select lines )
 
-Since Java 9, changed to store with bype[], not char[] anymore.
-
-```java
-    @Stable
-    private final byte[] value;
+<C-v>"ay ( ctrl-v: enter visual mode and select selection )
+"ap ( paste from register a )
 ```
 
-The purpose is to reduce memory cost, to make sure length calculation correctly, added new field ``coder``. when contains only Lation-1 characters, coder = 0, otherwise coder = 1;
+### 1.2 System Clipboard
 
-```java
-    /**
-     * The identifier of the encoding used to encode the bytes in
-     * {@code value}. The supported values in this implementation are
-     *
-     * LATIN1
-     * UTF16
-     *
-     * @implNote This field is trusted by the VM, and is a subject to
-     * constant folding if String instance is constant. Overwriting this
-     * field after construction will cause problems.
-     */
-    private final byte coder;
+```
+gg"+yG  (gg: go to first character, G: go to the end of the file )
+:%y+ ( %: refer to work on all lines )
+:%w !pbcopy ( copy the whole file in MacOS )
+
+"+p ( paste from system register, windows should replace + with * )
+:r !pbpaste ( past from the clipboard in MacOS )
 ```
 
-## 3. New methods in String
+BTW, copy whole file, no need use Vim, there are alot of ways ... ```cat {file} | pbcopy```
 
-### 3.1 strip(): can remove leading and trailing whitespace characters. The difference with trim() is, it will remove unicode whitespace characters.
 
-```java 
-char uwc = '\u2000'; //Unicdoe whitespace character
-String str = uwc + "abc" + uwc;
-System.out.println(str.strip());
-System.out.println(str.trim());
 
-System.out.println(str.stripLeading()); 
-System.out.println(str.stripTrailing());
+## 2. Use Buffers
+
+Buffers in Vim is an in-memory representation of files. 
+
+![List All Buffers](http://villim.github.io/img/2023/vim-buffers-list.png)
+
+```
+ :buffers ( list all buffers )
+ :ls ( list all buffers )
+ :b3 ( switch buffer with numbers )
+ :bnext ( swith to next buffer )
+ :bdelete 3 ( delete one buffer with number )
+ :2,5 bdelete ( delete buffers from 2 to 5 )
 ```
 
-### 3.2 isBlank(): Returns true if the string is empty or contains only white space codepoints, otherwise false
+We can use: [MiniBufExpl](https://github.com/fholgado/minibufexpl.vim)
 
-```bash
-jshell> String str = " ";
-jshell> System.out.println(str.isBlank());
-true
-``````
+![MiniBufExpl](http://villim.github.io/img/2023/vim-buffers-MiniBufExpl.png)
 
-### 3.3 repeat()
+While listing all buffers, Vim using **#** to indicate current buffers, with MiniBufExpl we can see all buffers and current buffer at the top.
 
-```bash
-jshell> String str = "monkey";
-jshell> System.out.println(str.repeat(4));
-monkeymonkeymonkeymonkey
+## 3. Use Windows 
+
+Vim always started with one single window, we can divide it horizaontally or vertically to multiple small windows.
+
+```
+<C-w>s ( split horizaontally )
+:split ( split horizaontally )
+
+<C-w>v ( split vertically )
+:vsplit ( split vertically )
+
+<C-w>w ( switch in cycle between open windows )
+<C-w>h ( focus the window to the left )
+<C-w>j ( focus the window below )
+<C-w>k ( focus the window above )
+<C-w>l ( focus the window to the right )
+
+:qa ( quit all windows )
+:qa! ( quit all windows without saving )
 ```
 
 
-## 4. Collections Factories
+## 4. Delete Lines with Pattern
 
-We were using java.util.Collections, java.util.ArrayList ... to create a collection of objects quickly.
-Now we can use the static method defined in interface.
-
-```java
-Set<String> set = Set.of("a","b","c");
-var list = List.of("x","y");
-Map map1 = Map.of("key1", "value1","key2","value2");
-Map map2 = Map.ofEntries(Map.entry("key1","value1"),Map.entry("key2","value2"));
+```
+:g/pattern/d  ( delete all lines that contain a pattern )
+:g!/pattern/d  ( delete all lines that do not contain a pattern )
 ```
 
-one thing need notice is, it generates Immutable Collection in this way:
+The **:global** command allows us to run an Ex command on each line that matches a particular pattern. 
 
-```bash
-jshell> map2.getClass()
-$17 ==> class java.util.ImmutableCollections$MapN
+## 5. Save to Nonexistent Directories
+
+```
+:!mkdir -p %:h
 ```
 
+* The **-p flag** is mkdir's parameter, it means to create intermediate directories. 
+* **:h**	means Head of the file name (the last component and any separators removed). In this line,  **:h** will removes the filename while preserving the rest of the path
+		
 
-## 5. var Keyword
+## 6. Save as the Root User
 
-Since Java 10, introduced Local Variable Type Inference (LVTI), otherwise known as **var**. It allows the develper to infer they type of variables, instead of the type of values.
+When we forgot to open file with sudo command, no need re-edit file again.
 
-```java
-var names = new ArrayList<String>();
-var newObj = new Object();
-var newName = "jack";
-var newAge = 10;
-var newMoney = 88888888L;
+```
+:w !sudo tee % > /dev/null
 ```
 
-* we can still use var as the name of a variable, method, or package.
-* Type intention of var is local, and in the case of var, the algorithm examines only the declaration of the local variable. This means it cannot be used for fields, method arguments, or return types.
-* var is implemented solely in the source code compiler (javac) and has no runtime or performance effect whatsoever.
+* The symbol **%** has special meaning on Vim’s command line, it expands to represent the path of the current buffer.
+* The **tee** command copies standard input to standard output, making a copy in zero or more files.  The output is unbuffered.
 
-    
+## 7. Vim Search
 
-## 6. Private method in Interface
+```
+:set hlsearch ( enable high light search result )
+:set nohlsearch ( disable high light search result )
+:set ignorecase ( case insensitive )
 
-```java
-public interface MyInterface {
+/search-text ( search search-text forward from current position )
+?search-text ( search search-text backward from current position )
 
-    private void privateMethod() {
-        System.out.println("123");
-    }
+/text1\|text2 ( search text1 or text2, the pipe has to be escaped )
+/^text1.*text2.*text2/ ( search text1 and text2 and text3, which text1 is the start of line )
 
-    default void defaultMethod() {
-        privateMethod(); // invoke private method
-    }
-}
+n ( after get searched results, use n to jump to next match )
+N ( after get searched results, use n to jump to previous match )
+<C-o> ( jump backward in the range of jump locations: that have checked with n/N )
+<C-i> ( jump forward in the range of jump locations: that have checked with n/N )
+
+:%s/search-text1/replace-with-text2/  ( search whole file and replace )
+:%s/search-text1/replace-with-text2/c ( search whole file and replace, confirm each replace )
 ```
 
-## 7. Improved try-catch
-
-```java
-  FileInputStream fis = new FileInputStream("abc.txt");
-  FileOutputStream fos = new FileOutputStream("def.txt");
-        
-  try (fis; fos) { // use ; to split multiple resources
-    
-  } catch (IOException e) {
-    e.printStackTrace();
-  }
-```    
-
-
-## 8. Singel-file source-code programs
-
-Before JDK 11, we have to compile before running our program:
-
-```bash
-javac HelloWorld.java
-java HelloWorld
-```
-
-Since JDK 11, we can do:
-
-```bash
-java HelloWorld.java
-```
-
-* It is limited to code that lives in a single source file
-* It cannot compile additional source files in the same run
-* It may contain any number of classes in the source file
-* It must hae the first class declared in the source file as the entry point
-* It must define the main method in the entry point class
+More for substitute: [Vim Substitute and Global](https://villim.github.io/vim-substitute-and-global) 
 
 
 
-   
-   
-## 9. HTTP/2 Support
 
-* New designed APIs under java.net.http
-* New API supports HTTP 1.1 as well as HTTP/2 and can fallback to HTTP 1.1 when a server being called dosn't support HTTP/2
-* Most significant benefits of HTTP/2 is its built-in multiplexing
-
-```java
- var client = HttpClient.newBuilder().build();
-
- var uri = new URI("http://google.com");
- var request = HttpRequest.newBuilder(uri).build();
-
- var handler = HttpResponse.BodyHandlers.ofString();
- CompletableFuture.allOf(
-         client.sendAsync(request, handler).thenAccept((resp) -> System.out.println(resp.body())),
-         client.sendAsync(request, handler).thenAccept((resp) -> System.out.println(resp.body())),
-         client.sendAsync(request, handler).thenAccept((resp) -> System.out.println(resp.body()))
- ).join();
-```
-
-
-
-## 10. Java Modules
-
-A **module** is a fundamentally new concept in the Java language since JDK 9. It is a unit of application deployment and dependency that has semantic meaning to the runtime. It is different from previous existing concepts for following reasons:
-
-* JAR files are invisible to the runtime
-* Packages just namespaces to group classes togehter for access control
-* Dependencies are defined at the class level only
-* Access control and reflection combine in a way that produces a fundamentally open system without clear deployment unit boundaries and with minimal enforcement.
-
-Modules, on the other hand:
-
-* Define dependency information between modules, so all sorts of resolution and linkage problems can be detected at compile or application start time
-* Provide proper encapsulation, so internal packages and classes can be make safe from pesky users who might want to fiddle with them
-* Are a proper unit of deployment with metadata that can be understood and consumed by a  modern Java runtime and are represented in the Java type system.
-
-... ...
-
-Should we start using Modules? 
-
-[Answer by Mark Reinhold](https://stackoverflow.com/questions/62950667/is-there-any-need-to-switch-to-modules-when-migrating-to-java-9-or-later/62959016#62959016) (Chief architect for java at Oracle):
-
-> Java 9 and later releases support traditional JAR files on the traditional class path, via the concept of the unnamed module, and will likely do so until the heat death of the universe.
-
-> Whether to start using modules is entirely up to you.
-
-> If you maintain a large legacy project that isn’t changing very much, then it’s probably not worth the effort.
-
-> If you work on a large project that’s grown difficult to maintain over the years then the clarity and discipline that modularization brings could be beneficial, but it could also be a lot of work, so think carefully before you begin.
-
-> If you’re starting a new project then I highly recommend starting with modules if you can. Many popular libraries have, by now, been upgraded to be modules, so there’s a good chance that all of the dependencies that you need are already available in modular form.
-
-> If you maintain a library then I strongly recommend that you upgrade it to be a module if you haven’t done so already, and if all of your library’s dependencies have been converted.
-
-
-## Read more: 
-
-* [Book: The Java Module System](https://www.manning.com/books/the-java-module-system)
-* [Migrating from Java 8 to Java 11 – A Guide Note](https://inapp.com/blog/migrating-from-java-8-to-java-11-a-guide-note/)
