@@ -5,9 +5,9 @@ layout: post
 
 Wanted to modify a xml file, there were some scenarios I need to modify or delete lines based on regular expression for multiple lines. After tried for a while I almost believe I need create a python or shell script to do it. Then I found Global commands, really powerful. And with advanced substitute command, it can complete my requirement perfectly!
 
-## VERY MAGIC & NOMAGIC
+## 1. VERY MAGIC & NOMAGIC
 
-### very magic : search as regular
+### 1.1 very magic : search as regular
 
 Vim's regular expression syntax is more like POSIX. So when I need match a date like "2016-06-01", the regular is 
 
@@ -28,15 +28,16 @@ So using VERY MAGIC, it will be much more readable.
 \v\d{4}-\d{2}-\d{2}
 ```
 
-### very nomagic : search as literal meaning
+### 1.2 very nomagic : search as literal meaning
 
 
 **\V (uppercase): ** all the characters has their literal meaning and must use \ for escape meanning.
 
 
 
-## Advance Subsitute
-### Special Character in Replace Field
+## 2. Advance Subsitute
+
+### 2.1 Special Character in Replace Field
 
 The subsitute format is like:
 
@@ -50,7 +51,7 @@ We can use following special characters in replace-string:
 * \0 inserts the text matched by the entire pattern
 * \1 inserts the text of the first backreference. \2 inserts the second backreference, and so on.
 
-### Search with Capatured Group
+### 2.2 Search with Capatured Group
 
 Inorder to use **\1** to **\N**, we need use **()** in search field to set matched text into groups.
 
@@ -63,7 +64,7 @@ Still using previous example,  to match "2016-06-01", the regular can be written
 In this way, I can use \1 refer to 2016, \2 refer to 06 and \3 refer to 01.
 
 
-### Substitute Example
+### 2.3 Substitute Example
 
 I want to change the date to datetime format in xml for all 
 
@@ -78,7 +79,7 @@ The command could be:
 ```
 
 
-## Global Command
+## 3. Global Command
 
 The syntax is :
 
@@ -88,7 +89,7 @@ The syntax is :
 
 Gloabal act Ex command on multiple lines, that means you can almost do anything beyond your imagination.
 
-### Gloabal Delete
+### 3.1 Gloabal Delete
 
 The easiest one I were using is delete lines based on a pattern
 
@@ -102,7 +103,7 @@ We can also delete all the lines unmatch with:
 :v[group]/{pattern}/d
 ```
 
-### Gloabal Sort
+### 3.2 Gloabal Sort
 This is a command to sort element inside CSS, like :
 
 ```
@@ -119,7 +120,4 @@ You can run as:
 ```bash
 :g/{/ .+1,/}/-1 sort
 ```
-
-
-
 
