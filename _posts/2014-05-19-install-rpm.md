@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Install RPM on Ubuntu
+title: Install RPM
 ---
+
+## Linux 
 
 We have talked about install Oracle in 10.1o long time ago : Ubuntu 10.10 开发环境配置 （五）Install Database 
 
@@ -34,3 +36,16 @@ Infact, using "-i" alien first convert .rpm to .deb file. You can do it manually
 
 	sudo dpkg -i oracle-instantclient-basic_10.2.0.5-1_i386.deb
 ```
+
+## MacOS
+
+```
+brew install rpm
+```
+
+When using in Eclipse may encounter error, caused by incorrect link, fix with:
+
+```
+sudo ln -s /usr/local/Cellar/rpm/4.14.0/bin/rpmbuild /usr/bin/rpmbuild
+```
+
