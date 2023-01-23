@@ -87,7 +87,7 @@ Option|HEAD change|Index Change| Working Directory Change
 * 使用 hard 执行(1)(2)(3)，会将 Commit A 的变化再放到 working directory
 
 
-<font color=Aquamarine>mixed 是 reset默认使用的参数。</font>
+<font color=red>mixed 是 reset默认使用的参数。</font>
 
 一个小技巧是，当使用soft的时候，staged 的文件状态并不会变，所以可以用来改变commit message。
 
