@@ -4,7 +4,7 @@ title: Review of 考试脑科学
 ---
 
 
-读完《(考试脑科学)[https://book.douban.com/subject/33944838/]》and《(考试脑科学2)[https://book.douban.com/subject/36228460/]》，结合一些其他阅读，简单做个笔记。
+读完《[考试脑科学](https://book.douban.com/subject/33944838/)》and《[考试脑科学2](https://book.douban.com/subject/36228460/)》，结合一些其他阅读，简单做个笔记。
 
 学习是一件从无到有的事情，困难的事情。池谷裕二在书里说学习有三要素，它们分别是：不畏失败的毅力、解决问题的能力、乐观的性格。但这已经是进入学习状态以后的事情了，我们还需要一个前提: 进入学习状态。
 
