@@ -150,6 +150,7 @@ sudo xcode-select -switch /
 * [The Unarchiver](https://macpaw.com/the-unarchiver) ( Compress Tool )
 * [Tweetbot](https://www.tapbots.com/tweetbot/mac/) ( Tweet MacOS Client )
 * [Tickeys](http://www.yingdev.com/projects/tickeys) ( 免费开源的键盘音效软件 )
+* [Folx](https://www.electronic.us/products/folx/) ( Download Manager with Torrent Support ) 
 
 ## Backup !!!!
 
