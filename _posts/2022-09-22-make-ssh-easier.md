@@ -164,6 +164,8 @@ Ctrl-b d # detach your current session
 Ctrl-b D # detach with a hoice 
 tmux ls # show current sessions
 tmux attach -t 0 # attach “0”which is the first part of your tmux ls output 
+tmux kill-session -t [session] # kill session
+tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t  # kill all sessions 
 ```
 
 Reference Docs:
