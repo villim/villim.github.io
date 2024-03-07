@@ -22,7 +22,7 @@ However, **VirtualBox** is really ... difficult to use, not friendly enbough. Th
 Install Vagrant with brew cask:
 
 ```
-brew cask install vagrant
+brew install --cask vagrant
 ```
 
 
