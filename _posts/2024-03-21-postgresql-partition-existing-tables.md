@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL: Partition Existing Tables
+title: PostgreSQL Partition Existing Tables
 layout: post
 ---
 
