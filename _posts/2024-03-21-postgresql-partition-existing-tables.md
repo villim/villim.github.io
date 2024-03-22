@@ -109,7 +109,9 @@ FROM moved_rows;
 
 ## 3. Manage Partition 
 
-But we don't want to manage these Partitions manually, we can use [pg_partman](https://github.com/pgpartman/pg_partman?tab=readme-ov-file#installation) to do it, and setup cron job with [pg_cron](https://github.com/citusdata/pg_cron?tab=readme-ov-file#installing-pg_cron).
+After partition table setup, we need continue creating partitions in the future and delete outdated partition tables.But we don't want to manage it manually ... 
+
+We can use [pg_partman](https://github.com/pgpartman/pg_partman?tab=readme-ov-file#installation) to do it, and setup cron job with [pg_cron](https://github.com/citusdata/pg_cron?tab=readme-ov-file#installing-pg_cron).
 
 We can use pa_partman to do [Partitioning an Existing Table](https://github.com/pgpartman/pg_partman/blob/master/doc/pg_partman_howto.md#partitioning-an-existing-table) directly, and then [Migrating An Existing Partition Set to PG Partition Manager](https://github.com/pgpartman/pg_partman/blob/master/doc/migrate_to_partman.md#migrating-an-existing-partition-set-to-pg-partition-manager), then setup Cronjob with pg_cron.
 
