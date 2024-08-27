@@ -112,4 +112,4 @@ aws s3api list-objects --profile localstack --bucket localstack-test-s3-bucket
 
 ```bash
 aws s3api delete-object --profile localstack --bucket localstack-test-s3-bucket --key test-file-key 
-``
+```
