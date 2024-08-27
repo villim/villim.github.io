@@ -1,5 +1,5 @@
 ---
-title: Test AWS SQS Locally with LocalStack
+title: Test AWS Locally with LocalStack
 layout: post
 ---
 
@@ -87,3 +87,29 @@ aws sqs send-message --queue-url http://sqs.us-east-1.localhost.localstack.cloud
 
 aws sqs receive-message --queue-url http://sqs.us-east-1.localhost.localstack.cloud:4566/000000000000/localstack-sqs-test-queue
 ```
+
+## 4. Quick Start with  S3
+
+### 4.1  Create Bucket
+
+```bash
+aws s3api create-bucket --profile localstack --bucket localstack-test-s3-bucket
+```
+
+### 4.2 Upload Object
+
+```bash
+aws s3api put-object --profile localstack --bucket localstack-test-s3-bucket --key test-file-key --body [file-path]
+```
+
+### 4.3 List Objects in Bucket
+
+```bash
+aws s3api list-objects --profile localstack --bucket localstack-test-s3-bucket
+```
+
+### 4.4 Delete Object by Key
+
+```bash
+aws s3api delete-object --profile localstack --bucket localstack-test-s3-bucket --key test-file-key 
+``
