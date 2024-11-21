@@ -115,6 +115,8 @@ Unless the above components are addressed, any attempt to correct or change a be
 
 但有些灰色地带可以讨论，仔细想想书里的 Box 在有些情况是不是会跟 Mask 这个概念有些重合。我门成长过程中伴随成长的 Box 也好，Mask 也好，一定程度来说也是我们的保护壳，有害也有用。类似电影《**The Invention of Lying**》，谎言会出现是因为它有用啊。
 
+![Books](http://villim.github.io/img/2024/review-of-self-deception-and-anatomy-of-peace-open-box.jpg)
+
 我们不能改变别人，我们也不能保证别人总是 out of box，甚至有些人内心就是对别人开战的。这个时候不妨开启 transparent box，不过前提是自己要能跳出三界，能看到自己的状态，并且可以「内心和平」地开启防护罩。应激的 Box 在任何情况下都是坏的。
 
 ### Q：这套理论，真的能在公司里实践吗？
@@ -122,6 +124,4 @@ Unless the above components are addressed, any attempt to correct or change a be
 这是我最大的疑惑，直觉来说，小公司还有可能用合伙人类似的方法，保持大家的开放性。不过天下没有不散的宴席，如果人不愿意改变，只能动刀裁人了。然而稍微大一点的公司就很不一样了，错综复杂的「利益」关系下，保持 out of box … ? 实际生活不是非黑即白的，如同上面所说，如果是 transparent box，你可能根本无法辨析。当大家都玩厚黑学时，还是回到了百害无一利的境地。而且也需要花费大量时间来关注管理这些「行为」，这也需要管理者有着相当高的 EQ 和技巧。 书里 CEO 亲自下场花上一两天功夫指导中层改变心态这事？有多大的可操作性 ...
 
 不过普及一下这样的知识，还是非常有必要的，因为如果我们都能看清自己的状况，至少能一定程度抑制这样的行为。即使是选择对一部分打开我们的 Box ，也是有益的结果了。
-
-![Books](http://villim.github.io/img/2024/review-of-self-deception-and-anatomy-of-peace-open-box.jpg)
 
