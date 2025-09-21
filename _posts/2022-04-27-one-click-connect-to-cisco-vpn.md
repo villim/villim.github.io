@@ -13,7 +13,7 @@ However, after switching to AWS, VPN connecting becoming a nightmare ! Frist, no
 
 Must find a way to reduce the pain, Lucky not only I'm thinking in this way. Thanks for all the colleagues's amazing help. 
 
-BTW,  I'm working on MacOS.
+BTW,  I'm working on MacOS. And this article is based on Cisco AnyConnect Version 4.
 
 ## Idea one: Cisco AnyConnect Profile
 
@@ -22,6 +22,8 @@ First of first, learned from @Neil, we can create a Profile to fix the configura
 ```bash
 /opt/cisco/anyconnect/profile
 ```
+
+with XML file as:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -183,3 +185,19 @@ Related Articles:
 
 * [Alfred Workflow Rename Ebook](https://villim.github.io/alfred-workflow-rename-ebook)
 * [Alfred3 Convertor Workflow](https://villim.github.io/alfred3-workflow-unitconvertor)
+
+P.S.
+
+This article is based on Cisco VPN Tool Version 4, after updated to version 5, the application structure has chagned:
+* Version 4 named : Cisco AnyConnect
+* Version 5 named: Cisco Secure Client
+
+For V5, the profile xml is under:
+```bash
+/opt/cisco/secureclient/vpn/profile/
+```
+
+And CLI tools is under:
+```bash
+/opt/cisco/secureclient/bin/vpn
+```
