@@ -4,3 +4,4 @@ permalink:   /:title
 #pygments:    true
 highlighter:  rouge
 markdown:    kramdown
+future: true
