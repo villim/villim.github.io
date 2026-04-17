@@ -23,6 +23,11 @@ First of first, learned from @Neil, we can create a Profile to fix the configura
 /opt/cisco/anyconnect/profile
 ```
 
+New version location changed to: 
+```bash
+/opt/cisco/secureclient/vpn/profile
+```
+
 with XML file as:
 
 ```xml
